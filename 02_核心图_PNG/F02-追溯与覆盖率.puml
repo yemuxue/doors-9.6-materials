@@ -1,0 +1,30 @@
+@startuml
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName PingFang SC
+skinparam defaultFontSize 16
+skinparam activity {
+  BackgroundColor #F6FBF9
+  BorderColor #9CC9BC
+  FontSize 16
+}
+skinparam arrowColor #6B7280
+title <size:26><b>F02  追溯链与覆盖率</b></size>\n<size:14><color:#5A6678>四层链路怎么连，覆盖率的分母怎么定</color></size>
+
+start
+:用户需求 URD;
+:系统需求 SRS;
+:设计说明 SDD;
+:测试用例 TC;
+:建立链接\n对象链接 / 链接模块;
+:统计覆盖率\n仅统计已批准的需求对象;
+if (存在断链？) then (是)
+  :列出孤儿对象\n无下游的需求 / 无上游的用例;
+  :回补链接;
+else (否)
+endif
+:输出覆盖报告\n按模块 + 按基线时点;
+stop
+
+caption \n<size:13><color:#5A6678>注：分母只算 Object Text 且已批准的对象，章节标题与占位行不计入。</color></size>
+@enduml

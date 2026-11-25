@@ -1,0 +1,32 @@
+@startuml
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName PingFang SC
+skinparam defaultFontSize 16
+skinparam activity {
+  BackgroundColor #F6F9FF
+  BorderColor #9FB4D6
+  FontSize 16
+}
+skinparam arrowColor #6B7280
+title <size:26><b>F01  需求进库流水线</b></size>\n<size:14><color:#5A6678>从一份 CSV 到 995 个对象、662 条追溯链接</color></size>
+
+start
+:准备输入\n中文需求表 CSV;
+repeat
+  :转换\nCSV 逐行转成 DXL;
+  :注入\nCOM 调用运行中的 DOORS;
+  :建库与建链\n目录 / 模块 / 对象 / 链接模块;
+  :自动校验\n读回 DOORS 与 CSV 比数量;
+repeat while (数量一致？) is (否，修数据后重跑)
+:出报告\n校验报告 + 截图;
+:交付\n可重复执行的脚本;
+stop
+
+note right
+  实测：首个 7 模块 767 对象，
+  导入耗时 12 秒，校验 100% 通过。
+end note
+
+caption \n<size:13><color:#5A6678>注：整条链路可重跑；校验不通过不会进入交付。</color></size>
+@enduml

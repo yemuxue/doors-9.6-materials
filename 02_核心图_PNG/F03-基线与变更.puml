@@ -1,0 +1,32 @@
+@startuml
+!pragma layout smetana
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName PingFang SC
+skinparam defaultFontSize 16
+skinparam state {
+  BackgroundColor #FFFBF4
+  BorderColor #E0C08C
+  FontSize 16
+}
+skinparam arrowColor #6B7280
+title <size:26><b>F03  基线与变更影响</b></size>\n<size:14><color:#5A6678>改动前后各打一个基线，差异就是影响面</color></size>
+
+state "基线 v1\n评审通过版" as B1
+state "需求变更\n新增 / 修改 / 删除" as C
+state "基线 v2\n变更后版本" as B2
+state "差异清单\n被改动对象 + 受影响的链接" as D
+
+[*] --> B1
+B1 --> C : 提出变更
+C --> B2 : 重新评审
+B2 --> D : 比较两个基线
+D --> [*] : 按清单回补测试
+
+note right of D
+  差异只能说明「哪些对象变了」，
+  影响面还要顺着 out-link 找下游。
+end note
+
+caption \n<size:13><color:#5A6678>注：基线是只读快照；变更影响 = 对象差异 + 链接可达的下游集合。</color></size>
+@enduml
