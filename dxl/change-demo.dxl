@@ -1,0 +1,48 @@
+﻿// change-demo.dxl
+// 变更演示：修改 SYS 模块第一条需求（SYS-0001）的文本，模拟一次需求变更
+// 定位方式：跳过章节标题，取第 1 条需求对象（不用 matches，DXL 的 matches 是正则搜索，容易误伤）
+
+Stream log = write("C:/doors-demo/doors-enterprise/output/change.log")
+
+Module m = edit("/01 系统需求/SYS_系统需求规格", true)
+
+if (null m) {
+    log << "open failed\n"
+} else {
+    Object obj
+    Object target
+    string txt
+    string hd
+    string oldText
+    int n = 0
+
+    for obj in m do {
+        hd = obj."Object Heading"
+        if (hd == "") {
+            n++
+            if (n == 1) { target = obj }
+        }
+    }
+
+    if (null target) {
+        log << "no requirement object\n"
+    } else {
+        oldText = target."Object Text"
+        log << "OLD: "
+        log << oldText
+        log << "\n"
+
+        target."Object Text" = oldText " 【变更 v1.1：并发上限调整为 1000，并增加变更审计留痕要求】"
+        save m
+
+        txt = target."Object Text"
+        log << "NEW: "
+        log << txt
+        log << "\n"
+        log << "saved\n"
+    }
+
+    close(m)
+}
+
+close(log)

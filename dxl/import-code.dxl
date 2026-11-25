@@ -1,0 +1,213 @@
+﻿// 自动生成文件，请勿手工修改；源数据见 data/requirements.csv
+// 生成脚本: tools/csv2dxl.ps1
+
+Stream log = write("C:/doors-demo/doors-enterprise/output/import.log")
+log << "import start\n"
+
+// ---- 1. 项目文件夹 ----
+Item chk1 = item("/07 代码单元")
+if (null chk1) {
+    Folder fd1 = create("/07 代码单元", "07 代码单元（企业级需求库）")
+    if (null fd1) { log << "folder 07 代码单元: failed\n" } else { log << "folder 07 代码单元: created\n" }
+} else {
+    log << "folder 07 代码单元: exists\n"
+}
+
+// ---- 模块 CODE (CODE_代码单元) ----
+Item ex_CODE = item("/07 代码单元/CODE_代码单元")
+if (null ex_CODE) {
+    Module m_CODE = create("/07 代码单元/CODE_代码单元", "CODE 需求规格说明", "", 1, false)
+    if (null m_CODE) {
+        log << "CODE: module create failed\n"
+    } else {
+        Object o
+        Object h
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0090 gatewayClient：路径:src/main/java/com/park/gateway/gatewayClient.java【类型:Client｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0089 gatewayListener：路径:src/main/java/com/park/gateway/gatewayListener.java【类型:Listener｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0088 gatewayScheduler：路径:src/main/java/com/park/gateway/gatewayScheduler.java【类型:Scheduler｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0087 gatewayValidator：路径:src/main/java/com/park/gateway/gatewayValidator.java【类型:Validator｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0086 gatewayMapper：路径:src/main/java/com/park/gateway/gatewayMapper.java【类型:Mapper｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0085 gatewayHandler：路径:src/main/java/com/park/gateway/gatewayHandler.java【类型:Handler｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0084 gatewayRepository：路径:src/main/java/com/park/gateway/gatewayRepository.java【类型:Repository｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0083 gatewayService：路径:src/main/java/com/park/gateway/gatewayService.java【类型:Service｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0082 gatewayController：路径:src/main/java/com/park/gateway/gatewayController.java【类型:Controller｜语言:Java｜模块:gateway｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0081 auditserviceClient：路径:src/main/java/com/park/audit/service/auditserviceClient.java【类型:Client｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0080 auditserviceListener：路径:src/main/java/com/park/audit/service/auditserviceListener.java【类型:Listener｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0079 auditserviceScheduler：路径:src/main/java/com/park/audit/service/auditserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0078 auditserviceValidator：路径:src/main/java/com/park/audit/service/auditserviceValidator.java【类型:Validator｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0077 auditserviceMapper：路径:src/main/java/com/park/audit/service/auditserviceMapper.java【类型:Mapper｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0076 auditserviceHandler：路径:src/main/java/com/park/audit/service/auditserviceHandler.java【类型:Handler｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0075 auditserviceRepository：路径:src/main/java/com/park/audit/service/auditserviceRepository.java【类型:Repository｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0074 auditserviceService：路径:src/main/java/com/park/audit/service/auditserviceService.java【类型:Service｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0073 auditserviceController：路径:src/main/java/com/park/audit/service/auditserviceController.java【类型:Controller｜语言:Java｜模块:audit-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0072 configserviceClient：路径:src/main/java/com/park/config/service/configserviceClient.java【类型:Client｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0071 configserviceListener：路径:src/main/java/com/park/config/service/configserviceListener.java【类型:Listener｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0070 configserviceScheduler：路径:src/main/java/com/park/config/service/configserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0069 configserviceValidator：路径:src/main/java/com/park/config/service/configserviceValidator.java【类型:Validator｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0068 configserviceMapper：路径:src/main/java/com/park/config/service/configserviceMapper.java【类型:Mapper｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0067 configserviceHandler：路径:src/main/java/com/park/config/service/configserviceHandler.java【类型:Handler｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0066 configserviceRepository：路径:src/main/java/com/park/config/service/configserviceRepository.java【类型:Repository｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0065 configserviceService：路径:src/main/java/com/park/config/service/configserviceService.java【类型:Service｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0064 configserviceController：路径:src/main/java/com/park/config/service/configserviceController.java【类型:Controller｜语言:Java｜模块:config-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0063 notifyserviceClient：路径:src/main/java/com/park/notify/service/notifyserviceClient.java【类型:Client｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0062 notifyserviceListener：路径:src/main/java/com/park/notify/service/notifyserviceListener.java【类型:Listener｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0061 notifyserviceScheduler：路径:src/main/java/com/park/notify/service/notifyserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0060 notifyserviceValidator：路径:src/main/java/com/park/notify/service/notifyserviceValidator.java【类型:Validator｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0059 notifyserviceMapper：路径:src/main/java/com/park/notify/service/notifyserviceMapper.java【类型:Mapper｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0058 notifyserviceHandler：路径:src/main/java/com/park/notify/service/notifyserviceHandler.java【类型:Handler｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0057 notifyserviceRepository：路径:src/main/java/com/park/notify/service/notifyserviceRepository.java【类型:Repository｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0056 notifyserviceService：路径:src/main/java/com/park/notify/service/notifyserviceService.java【类型:Service｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0055 notifyserviceController：路径:src/main/java/com/park/notify/service/notifyserviceController.java【类型:Controller｜语言:Java｜模块:notify-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0054 reportserviceClient：路径:src/main/java/com/park/report/service/reportserviceClient.java【类型:Client｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0053 reportserviceListener：路径:src/main/java/com/park/report/service/reportserviceListener.java【类型:Listener｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0052 reportserviceScheduler：路径:src/main/java/com/park/report/service/reportserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0051 reportserviceValidator：路径:src/main/java/com/park/report/service/reportserviceValidator.java【类型:Validator｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0050 reportserviceMapper：路径:src/main/java/com/park/report/service/reportserviceMapper.java【类型:Mapper｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0049 reportserviceHandler：路径:src/main/java/com/park/report/service/reportserviceHandler.java【类型:Handler｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0048 reportserviceRepository：路径:src/main/java/com/park/report/service/reportserviceRepository.java【类型:Repository｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0047 reportserviceService：路径:src/main/java/com/park/report/service/reportserviceService.java【类型:Service｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0046 reportserviceController：路径:src/main/java/com/park/report/service/reportserviceController.java【类型:Controller｜语言:Java｜模块:report-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0045 parkingserviceClient：路径:src/main/java/com/park/parking/service/parkingserviceClient.java【类型:Client｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0044 parkingserviceListener：路径:src/main/java/com/park/parking/service/parkingserviceListener.java【类型:Listener｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0043 parkingserviceScheduler：路径:src/main/java/com/park/parking/service/parkingserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0042 parkingserviceValidator：路径:src/main/java/com/park/parking/service/parkingserviceValidator.java【类型:Validator｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0041 parkingserviceMapper：路径:src/main/java/com/park/parking/service/parkingserviceMapper.java【类型:Mapper｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0040 parkingserviceHandler：路径:src/main/java/com/park/parking/service/parkingserviceHandler.java【类型:Handler｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0039 parkingserviceRepository：路径:src/main/java/com/park/parking/service/parkingserviceRepository.java【类型:Repository｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0038 parkingserviceService：路径:src/main/java/com/park/parking/service/parkingserviceService.java【类型:Service｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0037 parkingserviceController：路径:src/main/java/com/park/parking/service/parkingserviceController.java【类型:Controller｜语言:Java｜模块:parking-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0036 energyserviceClient：路径:src/main/java/com/park/energy/service/energyserviceClient.java【类型:Client｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0035 energyserviceListener：路径:src/main/java/com/park/energy/service/energyserviceListener.java【类型:Listener｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0034 energyserviceScheduler：路径:src/main/java/com/park/energy/service/energyserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0033 energyserviceValidator：路径:src/main/java/com/park/energy/service/energyserviceValidator.java【类型:Validator｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0032 energyserviceMapper：路径:src/main/java/com/park/energy/service/energyserviceMapper.java【类型:Mapper｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0031 energyserviceHandler：路径:src/main/java/com/park/energy/service/energyserviceHandler.java【类型:Handler｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0030 energyserviceRepository：路径:src/main/java/com/park/energy/service/energyserviceRepository.java【类型:Repository｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0029 energyserviceService：路径:src/main/java/com/park/energy/service/energyserviceService.java【类型:Service｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0028 energyserviceController：路径:src/main/java/com/park/energy/service/energyserviceController.java【类型:Controller｜语言:Java｜模块:energy-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0027 videoserviceClient：路径:src/main/java/com/park/video/service/videoserviceClient.java【类型:Client｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0026 videoserviceListener：路径:src/main/java/com/park/video/service/videoserviceListener.java【类型:Listener｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0025 videoserviceScheduler：路径:src/main/java/com/park/video/service/videoserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0024 videoserviceValidator：路径:src/main/java/com/park/video/service/videoserviceValidator.java【类型:Validator｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0023 videoserviceMapper：路径:src/main/java/com/park/video/service/videoserviceMapper.java【类型:Mapper｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0022 videoserviceHandler：路径:src/main/java/com/park/video/service/videoserviceHandler.java【类型:Handler｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0021 videoserviceRepository：路径:src/main/java/com/park/video/service/videoserviceRepository.java【类型:Repository｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0020 videoserviceService：路径:src/main/java/com/park/video/service/videoserviceService.java【类型:Service｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0019 videoserviceController：路径:src/main/java/com/park/video/service/videoserviceController.java【类型:Controller｜语言:Java｜模块:video-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0018 gateserviceClient：路径:src/main/java/com/park/gate/service/gateserviceClient.java【类型:Client｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0017 gateserviceListener：路径:src/main/java/com/park/gate/service/gateserviceListener.java【类型:Listener｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0016 gateserviceScheduler：路径:src/main/java/com/park/gate/service/gateserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0015 gateserviceValidator：路径:src/main/java/com/park/gate/service/gateserviceValidator.java【类型:Validator｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0014 gateserviceMapper：路径:src/main/java/com/park/gate/service/gateserviceMapper.java【类型:Mapper｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0013 gateserviceHandler：路径:src/main/java/com/park/gate/service/gateserviceHandler.java【类型:Handler｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0012 gateserviceRepository：路径:src/main/java/com/park/gate/service/gateserviceRepository.java【类型:Repository｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0011 gateserviceService：路径:src/main/java/com/park/gate/service/gateserviceService.java【类型:Service｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0010 gateserviceController：路径:src/main/java/com/park/gate/service/gateserviceController.java【类型:Controller｜语言:Java｜模块:gate-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0009 authserviceClient：路径:src/main/java/com/park/auth/service/authserviceClient.java【类型:Client｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Client｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0008 authserviceListener：路径:src/main/java/com/park/auth/service/authserviceListener.java【类型:Listener｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Listener｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0007 authserviceScheduler：路径:src/main/java/com/park/auth/service/authserviceScheduler.java【类型:Scheduler｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Scheduler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0006 authserviceValidator：路径:src/main/java/com/park/auth/service/authserviceValidator.java【类型:Validator｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Validator｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0005 authserviceMapper：路径:src/main/java/com/park/auth/service/authserviceMapper.java【类型:Mapper｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Mapper｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0004 authserviceHandler：路径:src/main/java/com/park/auth/service/authserviceHandler.java【类型:Handler｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Handler｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0003 authserviceRepository：路径:src/main/java/com/park/auth/service/authserviceRepository.java【类型:Repository｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Repository｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0002 authserviceService：路径:src/main/java/com/park/auth/service/authserviceService.java【类型:Service｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Service｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        o = create(m_CODE)
+        o."Object Text" = "CODE-0001 authserviceController：路径:src/main/java/com/park/auth/service/authserviceController.java【类型:Controller｜语言:Java｜模块:auth-service｜负责人:开发组】【类型:Controller｜优先级:中｜验证:检查｜状态:已实现｜责任人:开发组｜来源:代码仓库】"
+        save m_CODE
+        log << "CODE: created (90 reqs, 0 headings)\n"
+    }
+} else {
+    log << "CODE: already exists, skipped\n"
+}
+
+log << "import done\n"
+close(log)

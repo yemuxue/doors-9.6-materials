@@ -1,0 +1,1334 @@
+﻿// 自动生成：测试执行记录导入 + TR->TC 链接
+Stream log = write("C:/doors-demo/doors-enterprise/output/import-tr.log")
+log << "tr import start\n"
+
+Item chkMod = item("/05 验证与确认/TR_测试执行记录")
+if (null chkMod) {
+    Module mTR = create("/05 验证与确认/TR_测试执行记录", "测试执行记录（每轮执行结果）", "", 1, false)
+    if (null mTR) { log << "TR module: failed\n" } else {
+        Object o
+        o = create(mTR)
+        o."Object Text" = "TR-093 用例:TC-0093【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-092 用例:TC-0092【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-091 用例:TC-0091【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-090 用例:TC-0090【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-089 用例:TC-0089【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-088 用例:TC-0088【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-087 用例:TC-0087【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-086 用例:TC-0086【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-085 用例:TC-0085【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-084 用例:TC-0084【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-083 用例:TC-0083【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-082 用例:TC-0082【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-081 用例:TC-0081【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-080 用例:TC-0080【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-079 用例:TC-0079【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-078 用例:TC-0078【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-077 用例:TC-0077【轮次:R1｜结果:失败｜执行日期:2026-11-07｜缺陷数:2｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-076 用例:TC-0076【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-075 用例:TC-0075【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-074 用例:TC-0074【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-073 用例:TC-0073【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-072 用例:TC-0072【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-071 用例:TC-0071【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-070 用例:TC-0070【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-069 用例:TC-0069【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-068 用例:TC-0068【轮次:R1｜结果:失败｜执行日期:2026-11-07｜缺陷数:2｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-067 用例:TC-0067【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-066 用例:TC-0066【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-065 用例:TC-0065【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-064 用例:TC-0064【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-063 用例:TC-0063【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-062 用例:TC-0062【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-061 用例:TC-0061【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-060 用例:TC-0060【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-059 用例:TC-0059【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-058 用例:TC-0058【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-057 用例:TC-0057【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-056 用例:TC-0056【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-055 用例:TC-0055【轮次:R1｜结果:失败｜执行日期:2026-11-05｜缺陷数:3｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-054 用例:TC-0054【轮次:R1｜结果:阻塞｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-053 用例:TC-0053【轮次:R1｜结果:失败｜执行日期:2026-11-07｜缺陷数:2｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-052 用例:TC-0052【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-051 用例:TC-0051【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-050 用例:TC-0050【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-049 用例:TC-0049【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-048 用例:TC-0048【轮次:R1｜结果:失败｜执行日期:2026-11-04｜缺陷数:2｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-047 用例:TC-0047【轮次:R1｜结果:失败｜执行日期:2026-11-07｜缺陷数:1｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-046 用例:TC-0046【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-045 用例:TC-0045【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-044 用例:TC-0044【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-043 用例:TC-0043【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-042 用例:TC-0042【轮次:R1｜结果:失败｜执行日期:2026-11-05｜缺陷数:2｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-041 用例:TC-0041【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-040 用例:TC-0040【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-039 用例:TC-0039【轮次:R1｜结果:阻塞｜执行日期:2026-11-05｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-038 用例:TC-0038【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-037 用例:TC-0037【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-036 用例:TC-0036【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-035 用例:TC-0035【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-034 用例:TC-0034【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-033 用例:TC-0033【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-032 用例:TC-0032【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-031 用例:TC-0031【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-030 用例:TC-0030【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-029 用例:TC-0029【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-028 用例:TC-0028【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-027 用例:TC-0027【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-026 用例:TC-0026【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-025 用例:TC-0025【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-024 用例:TC-0024【轮次:R1｜结果:失败｜执行日期:2026-11-04｜缺陷数:1｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-023 用例:TC-0023【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-022 用例:TC-0022【轮次:R1｜结果:失败｜执行日期:2026-11-04｜缺陷数:3｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-021 用例:TC-0021【轮次:R1｜结果:阻塞｜执行日期:2026-11-06｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-020 用例:TC-0020【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-019 用例:TC-0019【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-018 用例:TC-0018【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-017 用例:TC-0017【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-016 用例:TC-0016【轮次:R1｜结果:通过｜执行日期:2026-11-04｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-015 用例:TC-0015【轮次:R1｜结果:阻塞｜执行日期:2026-11-05｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-014 用例:TC-0014【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-013 用例:TC-0013【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-012 用例:TC-0012【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-011 用例:TC-0011【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        o = create(mTR)
+        o."Object Text" = "TR-010 用例:TC-0010【轮次:R1｜结果:阻塞｜执行日期:2026-11-07｜缺陷数:0｜执行人:刘敏】"
+        o = create(mTR)
+        o."Object Text" = "TR-009 用例:TC-0009【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-008 用例:TC-0008【轮次:R1｜结果:通过｜执行日期:2026-11-07｜缺陷数:0｜执行人:张涛】"
+        o = create(mTR)
+        o."Object Text" = "TR-007 用例:TC-0007【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-006 用例:TC-0006【轮次:R1｜结果:阻塞｜执行日期:2026-11-06｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-005 用例:TC-0005【轮次:R1｜结果:通过｜执行日期:2026-11-03｜缺陷数:0｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-004 用例:TC-0004【轮次:R1｜结果:通过｜执行日期:2026-11-06｜缺陷数:0｜执行人:王芳】"
+        o = create(mTR)
+        o."Object Text" = "TR-003 用例:TC-0003【轮次:R1｜结果:通过｜执行日期:2026-11-05｜缺陷数:0｜执行人:陈磊】"
+        o = create(mTR)
+        o."Object Text" = "TR-002 用例:TC-0002【轮次:R1｜结果:失败｜执行日期:2026-11-06｜缺陷数:1｜执行人:李文】"
+        o = create(mTR)
+        o."Object Text" = "TR-001 用例:TC-0001【轮次:R1｜结果:未执行｜执行日期:｜缺陷数:0｜执行人:】"
+        save mTR
+        log << "TR module: created (93 records)\n"
+    }
+} else { log << "TR module: exists, skip\n" }
+
+Item chkLM = item("/05 验证与确认/TR_to_TC")
+if (null chkLM) {
+    Module lm = create("/05 验证与确认/TR_to_TC", "执行记录到测试用例", manyToMany)
+    log << "link module: created\n"
+} else { log << "link module: exists\n" }
+
+Module mTR2 = edit("/05 验证与确认/TR_测试执行记录", true)
+Module mTC  = edit("/05 验证与确认/TC_测试用例规格", true)
+Object obj
+Object trObj
+Object tcObj
+string txt
+string t2
+
+// TR-093 -> TC-0093
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-093 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-093: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0093 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-092 -> TC-0092
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-092 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-092: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0092 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-091 -> TC-0091
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-091 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-091: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0091 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-090 -> TC-0090
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-090 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-090: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0090 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-089 -> TC-0089
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-089 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-089: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0089 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-088 -> TC-0088
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-088 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-088: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0088 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-087 -> TC-0087
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-087 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-087: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0087 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-086 -> TC-0086
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-086 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-086: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0086 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-085 -> TC-0085
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-085 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-085: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0085 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-084 -> TC-0084
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-084 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-084: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0084 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-083 -> TC-0083
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-083 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-083: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0083 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-082 -> TC-0082
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-082 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-082: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0082 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-081 -> TC-0081
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-081 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-081: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0081 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-080 -> TC-0080
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-080 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-080: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0080 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-079 -> TC-0079
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-079 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-079: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0079 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-078 -> TC-0078
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-078 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-078: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0078 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-077 -> TC-0077
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-077 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-077: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0077 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-076 -> TC-0076
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-076 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-076: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0076 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-075 -> TC-0075
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-075 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-075: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0075 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-074 -> TC-0074
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-074 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-074: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0074 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-073 -> TC-0073
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-073 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-073: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0073 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-072 -> TC-0072
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-072 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-072: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0072 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-071 -> TC-0071
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-071 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-071: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0071 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-070 -> TC-0070
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-070 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-070: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0070 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-069 -> TC-0069
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-069 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-069: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0069 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-068 -> TC-0068
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-068 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-068: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0068 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-067 -> TC-0067
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-067 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-067: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0067 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-066 -> TC-0066
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-066 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-066: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0066 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-065 -> TC-0065
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-065 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-065: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0065 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-064 -> TC-0064
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-064 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-064: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0064 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-063 -> TC-0063
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-063 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-063: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0063 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-062 -> TC-0062
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-062 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-062: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0062 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-061 -> TC-0061
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-061 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-061: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0061 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-060 -> TC-0060
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-060 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-060: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0060 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-059 -> TC-0059
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-059 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-059: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0059 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-058 -> TC-0058
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-058 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-058: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0058 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-057 -> TC-0057
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-057 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-057: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0057 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-056 -> TC-0056
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-056 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-056: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0056 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-055 -> TC-0055
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-055 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-055: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0055 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-054 -> TC-0054
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-054 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-054: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0054 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-053 -> TC-0053
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-053 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-053: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0053 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-052 -> TC-0052
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-052 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-052: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0052 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-051 -> TC-0051
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-051 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-051: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0051 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-050 -> TC-0050
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-050 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-050: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0050 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-049 -> TC-0049
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-049 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-049: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0049 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-048 -> TC-0048
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-048 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-048: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0048 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-047 -> TC-0047
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-047 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-047: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0047 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-046 -> TC-0046
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-046 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-046: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0046 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-045 -> TC-0045
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-045 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-045: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0045 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-044 -> TC-0044
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-044 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-044: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0044 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-043 -> TC-0043
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-043 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-043: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0043 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-042 -> TC-0042
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-042 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-042: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0042 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-041 -> TC-0041
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-041 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-041: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0041 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-040 -> TC-0040
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-040 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-040: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0040 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-039 -> TC-0039
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-039 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-039: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0039 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-038 -> TC-0038
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-038 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-038: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0038 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-037 -> TC-0037
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-037 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-037: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0037 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-036 -> TC-0036
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-036 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-036: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0036 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-035 -> TC-0035
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-035 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-035: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0035 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-034 -> TC-0034
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-034 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-034: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0034 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-033 -> TC-0033
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-033 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-033: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0033 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-032 -> TC-0032
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-032 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-032: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0032 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-031 -> TC-0031
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-031 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-031: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0031 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-030 -> TC-0030
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-030 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-030: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0030 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-029 -> TC-0029
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-029 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-029: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0029 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-028 -> TC-0028
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-028 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-028: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0028 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-027 -> TC-0027
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-027 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-027: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0027 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-026 -> TC-0026
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-026 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-026: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0026 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-025 -> TC-0025
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-025 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-025: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0025 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-024 -> TC-0024
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-024 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-024: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0024 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-023 -> TC-0023
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-023 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-023: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0023 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-022 -> TC-0022
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-022 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-022: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0022 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-021 -> TC-0021
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-021 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-021: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0021 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-020 -> TC-0020
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-020 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-020: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0020 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-019 -> TC-0019
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-019 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-019: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0019 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-018 -> TC-0018
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-018 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-018: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0018 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-017 -> TC-0017
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-017 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-017: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0017 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-016 -> TC-0016
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-016 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-016: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0016 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-015 -> TC-0015
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-015 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-015: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0015 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-014 -> TC-0014
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-014 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-014: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0014 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-013 -> TC-0013
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-013 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-013: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0013 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-012 -> TC-0012
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-012 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-012: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0012 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-011 -> TC-0011
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-011 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-011: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0011 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-010 -> TC-0010
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-010 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-010: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0010 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-009 -> TC-0009
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-009 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-009: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0009 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-008 -> TC-0008
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-008 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-008: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0008 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-007 -> TC-0007
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-007 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-007: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0007 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-006 -> TC-0006
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-006 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-006: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0006 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-005 -> TC-0005
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-005 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-005: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0005 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-004 -> TC-0004
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-004 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-004: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0004 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-003 -> TC-0003
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-003 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-003: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0003 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-002 -> TC-0002
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-002 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-002: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0002 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+// TR-001 -> TC-0001
+trObj = null
+for obj in mTR2 do {
+    txt = obj."Object Text"
+    if (matches("TR-001 ", txt)) { trObj = obj }
+}
+if (null trObj) { log << "TR-001: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0001 ", t2)) { trObj -> "/05 验证与确认/TR_to_TC" -> obj }
+    }
+}
+
+save mTR2
+log << "tr import done\n"
+close(log)

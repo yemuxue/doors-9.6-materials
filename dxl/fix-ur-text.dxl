@@ -1,0 +1,78 @@
+﻿Stream log = write("C:/doors-demo/doors-enterprise/output/fix-ur.log")
+Module mUR = edit("/00 用户需求/UR_用户需求", true)
+Object o
+int n = 0
+Object nthReq(Module m, int k) {
+    Object x
+    Object found = null
+    string hd
+    int c = 0
+    for x in m do {
+        hd = x."Object Heading"
+        if (hd == "") { c++ ; if (c == k) { found = x } }
+    }
+    return found
+}
+o = nthReq(mUR, 1)
+if (null o) { log << "UR 1 missing\n" } else { o."Object Text" = "UR-0001 统一登录：一次登录访问园区所有子系统。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 2)
+if (null o) { log << "UR 2 missing\n" } else { o."Object Text" = "UR-0002 门禁通行：授权人员刷脸或刷卡通过门禁。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 3)
+if (null o) { log << "UR 3 missing\n" } else { o."Object Text" = "UR-0003 视频查看：安保人员实时查看园区各区域视频。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 4)
+if (null o) { log << "UR 4 missing\n" } else { o."Object Text" = "UR-0004 录像回放：发生事件后回放历史录像。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 5)
+if (null o) { log << "UR 5 missing\n" } else { o."Object Text" = "UR-0005 访客预约：访客提前在线预约并被授权通行。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 6)
+if (null o) { log << "UR 6 missing\n" } else { o."Object Text" = "UR-0006 能耗查询：管理人员查询各楼宇能耗数据。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 7)
+if (null o) { log << "UR 7 missing\n" } else { o."Object Text" = "UR-0007 能耗分析：管理人员按时间维度分析能耗趋势。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 8)
+if (null o) { log << "UR 8 missing\n" } else { o."Object Text" = "UR-0008 停车缴费：车主在离场前完成停车缴费。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 9)
+if (null o) { log << "UR 9 missing\n" } else { o."Object Text" = "UR-0009 车位引导：车主看到空余车位并导航。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 10)
+if (null o) { log << "UR 10 missing\n" } else { o."Object Text" = "UR-0010 告警处置：安保人员接收并处置各类告警。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 11)
+if (null o) { log << "UR 11 missing\n" } else { o."Object Text" = "UR-0011 电子巡更：安保人员按路线完成巡更打卡。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 12)
+if (null o) { log << "UR 12 missing\n" } else { o."Object Text" = "UR-0012 周界防护：园区周界被入侵时及时发现。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 13)
+if (null o) { log << "UR 13 missing\n" } else { o."Object Text" = "UR-0013 照明控制：按时间或场景控制园区照明。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 14)
+if (null o) { log << "UR 14 missing\n" } else { o."Object Text" = "UR-0014 空调控制：远程调节公共区域空调。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 15)
+if (null o) { log << "UR 15 missing\n" } else { o."Object Text" = "UR-0015 光伏监测：运维人员查看光伏发电情况。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 16)
+if (null o) { log << "UR 16 missing\n" } else { o."Object Text" = "UR-0016 报表导出：管理人员导出各类运营报表。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 17)
+if (null o) { log << "UR 17 missing\n" } else { o."Object Text" = "UR-0017 移动端访问：用户通过手机查看关键信息。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 18)
+if (null o) { log << "UR 18 missing\n" } else { o."Object Text" = "UR-0018 权限管理：管理员分配不同角色的功能权限。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 19)
+if (null o) { log << "UR 19 missing\n" } else { o."Object Text" = "UR-0019 操作审计：所有关键操作可被追溯。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 20)
+if (null o) { log << "UR 20 missing\n" } else { o."Object Text" = "UR-0020 数据共享：各子系统数据统一共享。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 21)
+if (null o) { log << "UR 21 missing\n" } else { o."Object Text" = "UR-0021 单点登录：登录一次即可访问全部系统。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 22)
+if (null o) { log << "UR 22 missing\n" } else { o."Object Text" = "UR-0022 消息通知：系统通过短信邮件推送通知。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 23)
+if (null o) { log << "UR 23 missing\n" } else { o."Object Text" = "UR-0023 设备管理：运维人员查看设备在线状态。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 24)
+if (null o) { log << "UR 24 missing\n" } else { o."Object Text" = "UR-0024 故障报修：用户提交设备故障报修。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 25)
+if (null o) { log << "UR 25 missing\n" } else { o."Object Text" = "UR-0025 巡查记录：巡查过程留痕可查询。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 26)
+if (null o) { log << "UR 26 missing\n" } else { o."Object Text" = "UR-0026 应急指挥：突发事件统一指挥调度。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 27)
+if (null o) { log << "UR 27 missing\n" } else { o."Object Text" = "UR-0027 访客轨迹：查询访客在园区内的活动轨迹。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 28)
+if (null o) { log << "UR 28 missing\n" } else { o."Object Text" = "UR-0028 黑名单管理：车牌或人员黑名单拦截。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 29)
+if (null o) { log << "UR 29 missing\n" } else { o."Object Text" = "UR-0029 收费规则：按不同规则计费。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+o = nthReq(mUR, 30)
+if (null o) { log << "UR 30 missing\n" } else { o."Object Text" = "UR-0030 对账管理：财务按日对账并导出数据。【类型:用户需求｜优先级:高｜验证:演示｜状态:已评审｜责任人:业务方｜来源:业务调研】" }
+save mUR
+log << "ur text fixed\n"
+close(log)

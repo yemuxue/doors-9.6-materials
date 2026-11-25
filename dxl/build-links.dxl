@@ -1,0 +1,118 @@
+﻿// build-links.dxl
+// 建立需求追溯链接：
+//   SYS 系统需求  --分解-->  SEC / NRG / ACS 子系统需求
+//   SEC 子系统需求 --细化-->  SW 软件需求
+//   SYS 系统需求  <--验证--   TC 测试用例
+//
+// 依赖：
+//   * 链接模块必须先存在（本脚本会自动创建）
+//   * 创建链接需要"源对象"所在模块以 edit 方式打开
+//   * 语法：源对象 -> "链接模块完整路径" -> 目标对象
+
+Stream log = write("C:/doors-demo/doors-enterprise/output/link-build.log")
+log << "link build start\n"
+
+// ---------- 1. 确保链接模块存在 ----------
+Item chk1 = item("/01 系统需求/SYS_to_SUB")
+if (null chk1) {
+    Module lm1 = create("/01 系统需求/SYS_to_SUB", "系统需求到子系统需求", manyToMany)
+    if (null lm1) { log << "LM1: failed\n" } else { log << "LM1: created\n" }
+} else {
+    log << "LM1: exists\n"
+}
+
+Item chk2 = item("/02 子系统需求/SUB_to_SW")
+if (null chk2) {
+    Module lm2 = create("/02 子系统需求/SUB_to_SW", "子系统需求到软件需求", manyToMany)
+    if (null lm2) { log << "LM2: failed\n" } else { log << "LM2: created\n" }
+} else {
+    log << "LM2: exists\n"
+}
+
+Item chk3 = item("/05 验证与确认/VERIFY")
+if (null chk3) {
+    Module lm3 = create("/05 验证与确认/VERIFY", "测试用例验证需求", manyToMany)
+    if (null lm3) { log << "LM3: failed\n" } else { log << "LM3: created\n" }
+} else {
+    log << "LM3: exists\n"
+}
+
+// ---------- 2. 打开模块（源模块需要 edit） ----------
+Module mSYS = edit("/01 系统需求/SYS_系统需求规格", true)
+Module mSEC = edit("/02 子系统需求/SEC_安防子系统需求", true)
+Module mNRG = edit("/02 子系统需求/NRG_能源子系统需求", true)
+Module mACS = edit("/02 子系统需求/ACS_通行子系统需求", true)
+Module mSW  = edit("/03 软件需求/SW_平台软件需求", true)
+Module mTC  = edit("/05 验证与确认/TC_测试用例规格", true)
+
+if (null mSYS) { log << "open SYS failed\n" }
+if (null mSEC) { log << "open SEC failed\n" }
+if (null mNRG) { log << "open NRG failed\n" }
+if (null mACS) { log << "open ACS failed\n" }
+if (null mSW)  { log << "open SW failed\n" }
+if (null mTC)  { log << "open TC failed\n" }
+log << "modules opened\n"
+
+// ---------- 3. 链接函数 ----------
+// 把 src 中的需求对象，按"轮询"方式逐条连到 tgt 中的需求对象
+void linkAll_(Module src, Module tgt, string lmPath) {
+    int nTgt = 0
+    Object o
+    Object t
+    string h
+
+    for t in tgt do {
+        h = t."Object Heading"
+        if (h == "") { nTgt++ }
+    }
+
+    int cursor = 0
+    int j
+    for o in src do {
+        h = o."Object Heading"
+        if (h == "") {
+            if (cursor >= nTgt) { cursor = 0 }
+            j = 0
+            for t in tgt do {
+                h = t."Object Heading"
+                if (h == "") {
+                    if (j == cursor) { o -> lmPath -> t }
+                    j++
+                }
+            }
+            cursor++
+        }
+    }
+}
+
+// ---------- 4. 建链接 ----------
+linkAll_(mSYS, mSEC, "/01 系统需求/SYS_to_SUB")
+log << "SYS->SEC done\n"
+linkAll_(mSYS, mNRG, "/01 系统需求/SYS_to_SUB")
+log << "SYS->NRG done\n"
+linkAll_(mSYS, mACS, "/01 系统需求/SYS_to_SUB")
+log << "SYS->ACS done\n"
+
+linkAll_(mSEC, mSW, "/02 子系统需求/SUB_to_SW")
+log << "SEC->SW done\n"
+
+linkAll_(mTC, mSYS, "/05 验证与确认/VERIFY")
+log << "TC->SYS done\n"
+
+// ---------- 5. 保存 ----------
+save mSYS
+save mSEC
+save mNRG
+save mACS
+save mSW
+save mTC
+
+close(mSYS)
+close(mSEC)
+close(mNRG)
+close(mACS)
+close(mSW)
+close(mTC)
+
+log << "link build done\n"
+close(log)

@@ -1,0 +1,40 @@
+﻿// snapshot.dxl
+// 导出全部需求对象快照（作为"基线 v1.0"的参照）
+// 行格式：模块代号|绝对编号|对象文本
+
+Stream out = write("C:/doors-demo/doors-enterprise/output/_snap.txt")
+
+void snap_(Stream o, string code, string path) {
+    Module m = read(path, true)
+    Object obj
+    string num
+    string txt
+    string hd
+    if (null m) {
+        o << code
+        o << "|OPEN-FAILED|-\n"
+        return
+    }
+    for obj in m do {
+        hd = obj."Object Heading"
+        if (hd == "") {
+            num = number obj
+            txt = obj."Object Text"
+            o << code
+            o << "|"
+            o << num
+            o << "|"
+            o << txt
+            o << "\n"
+        }
+    }
+}
+
+snap_(out, "SYS", "/01 系统需求/SYS_系统需求规格")
+snap_(out, "SEC", "/02 子系统需求/SEC_安防子系统需求")
+snap_(out, "NRG", "/02 子系统需求/NRG_能源子系统需求")
+snap_(out, "ACS", "/02 子系统需求/ACS_通行子系统需求")
+snap_(out, "SW",  "/03 软件需求/SW_平台软件需求")
+snap_(out, "TC",  "/05 验证与确认/TC_测试用例规格")
+
+close(out)

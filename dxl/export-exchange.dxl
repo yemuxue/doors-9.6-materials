@@ -1,0 +1,53 @@
+﻿// export-exchange.dxl
+// 导出交换数据：需求清单 + 追溯链接（供 tools/gen-reqif.ps1 生成 ReqIF 1.2）
+// 输出格式：
+//   REQ|<模块代号>|<对象文本>
+//   LNK|<源对象文本>|<目标对象文本>
+
+Stream out = write("C:/doors-demo/doors-enterprise/output/exchange.txt")
+
+void dumpModule_(Stream o, string code, string path) {
+    Module m = read(path, true)
+    Object obj
+    Object tgt
+    Link l
+    string hd
+    string txt
+    string ttxt
+    if (null m) {
+        o << "ERR|"
+        o << code
+        o << "|open-failed\n"
+        return
+    }
+    for obj in m do {
+        hd = obj."Object Heading"
+        if (hd == "") {
+            txt = obj."Object Text"
+            o << "REQ|"
+            o << code
+            o << "|"
+            o << txt
+            o << "\n"
+            for l in obj -> "*" do {
+                tgt = target(l)
+                ttxt = tgt."Object Text"
+                o << "LNK|"
+                o << txt
+                o << "|"
+                o << ttxt
+                o << "\n"
+            }
+        }
+    }
+}
+
+dumpModule_(out, "SYS", "/01 系统需求/SYS_系统需求规格")
+dumpModule_(out, "SEC", "/02 子系统需求/SEC_安防子系统需求")
+dumpModule_(out, "NRG", "/02 子系统需求/NRG_能源子系统需求")
+dumpModule_(out, "ACS", "/02 子系统需求/ACS_通行子系统需求")
+dumpModule_(out, "SW",  "/03 软件需求/SW_平台软件需求")
+dumpModule_(out, "IF",  "/04 接口与数据/IF_接口需求规格")
+dumpModule_(out, "TC",  "/05 验证与确认/TC_测试用例规格")
+
+close(out)

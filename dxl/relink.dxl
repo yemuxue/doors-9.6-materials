@@ -1,0 +1,1095 @@
+﻿// 自动生成：重建追溯链接（按测试层级）
+Stream log = write("C:/doors-demo/doors-enterprise/output/relink.log")
+log << "relink start\n"
+
+Object nthReq(Module m, int k) {
+    Object o
+    Object found = null
+    string hd
+    int n = 0
+    for o in m do {
+        hd = o."Object Heading"
+        if (hd == "") {
+            n++
+            if (n == k) { found = o }
+        }
+    }
+    return found
+}
+
+Item c1 = item("/00 用户需求/UR_to_SYS")
+if (null c1) { Module x1 = create("/00 用户需求/UR_to_SYS", "用户需求分解到系统需求", manyToMany) ; log << "lm1 created\n" } else { log << "lm1 exists\n" }
+Item c2 = item("/07 代码单元/SW_to_CODE")
+if (null c2) { Module x2 = create("/07 代码单元/SW_to_CODE", "代码单元实现软件需求", manyToMany) ; log << "lm2 created\n" } else { log << "lm2 exists\n" }
+
+Module mUR  = edit("/00 用户需求/UR_用户需求", true)
+Module mSYS = edit("/01 系统需求/SYS_系统需求规格", true)
+Module mSEC = edit("/02 子系统需求/SEC_安防子系统需求", true)
+Module mNRG = edit("/02 子系统需求/NRG_能源子系统需求", true)
+Module mACS = edit("/02 子系统需求/ACS_通行子系统需求", true)
+Module mSW  = edit("/03 软件需求/SW_平台软件需求", true)
+Module mTC  = edit("/05 验证与确认/TC_测试用例规格", true)
+Module mCODE = edit("/07 代码单元/CODE_代码单元", true)
+log << "modules opened\n"
+
+Object o
+Object t
+string txt
+
+// ---- 1. 标注测试层级 ----
+o = nthReq(mTC, 1)
+if (null o) { log << "TC 1 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 2)
+if (null o) { log << "TC 2 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 3)
+if (null o) { log << "TC 3 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 4)
+if (null o) { log << "TC 4 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 5)
+if (null o) { log << "TC 5 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 6)
+if (null o) { log << "TC 6 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 7)
+if (null o) { log << "TC 7 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 8)
+if (null o) { log << "TC 8 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 9)
+if (null o) { log << "TC 9 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 10)
+if (null o) { log << "TC 10 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 11)
+if (null o) { log << "TC 11 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 12)
+if (null o) { log << "TC 12 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 13)
+if (null o) { log << "TC 13 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 14)
+if (null o) { log << "TC 14 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 15)
+if (null o) { log << "TC 15 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 16)
+if (null o) { log << "TC 16 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 17)
+if (null o) { log << "TC 17 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 18)
+if (null o) { log << "TC 18 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 19)
+if (null o) { log << "TC 19 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 20)
+if (null o) { log << "TC 20 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 21)
+if (null o) { log << "TC 21 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 22)
+if (null o) { log << "TC 22 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 23)
+if (null o) { log << "TC 23 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 24)
+if (null o) { log << "TC 24 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 25)
+if (null o) { log << "TC 25 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 26)
+if (null o) { log << "TC 26 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 27)
+if (null o) { log << "TC 27 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 28)
+if (null o) { log << "TC 28 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 29)
+if (null o) { log << "TC 29 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 30)
+if (null o) { log << "TC 30 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:单元测试】" }
+o = nthReq(mTC, 31)
+if (null o) { log << "TC 31 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 32)
+if (null o) { log << "TC 32 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 33)
+if (null o) { log << "TC 33 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 34)
+if (null o) { log << "TC 34 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 35)
+if (null o) { log << "TC 35 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 36)
+if (null o) { log << "TC 36 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 37)
+if (null o) { log << "TC 37 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 38)
+if (null o) { log << "TC 38 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 39)
+if (null o) { log << "TC 39 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 40)
+if (null o) { log << "TC 40 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 41)
+if (null o) { log << "TC 41 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 42)
+if (null o) { log << "TC 42 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 43)
+if (null o) { log << "TC 43 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 44)
+if (null o) { log << "TC 44 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 45)
+if (null o) { log << "TC 45 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 46)
+if (null o) { log << "TC 46 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 47)
+if (null o) { log << "TC 47 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 48)
+if (null o) { log << "TC 48 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 49)
+if (null o) { log << "TC 49 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 50)
+if (null o) { log << "TC 50 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 51)
+if (null o) { log << "TC 51 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 52)
+if (null o) { log << "TC 52 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 53)
+if (null o) { log << "TC 53 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 54)
+if (null o) { log << "TC 54 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 55)
+if (null o) { log << "TC 55 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:集成测试】" }
+o = nthReq(mTC, 56)
+if (null o) { log << "TC 56 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 57)
+if (null o) { log << "TC 57 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 58)
+if (null o) { log << "TC 58 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 59)
+if (null o) { log << "TC 59 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 60)
+if (null o) { log << "TC 60 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 61)
+if (null o) { log << "TC 61 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 62)
+if (null o) { log << "TC 62 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 63)
+if (null o) { log << "TC 63 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 64)
+if (null o) { log << "TC 64 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 65)
+if (null o) { log << "TC 65 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 66)
+if (null o) { log << "TC 66 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 67)
+if (null o) { log << "TC 67 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 68)
+if (null o) { log << "TC 68 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 69)
+if (null o) { log << "TC 69 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 70)
+if (null o) { log << "TC 70 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 71)
+if (null o) { log << "TC 71 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 72)
+if (null o) { log << "TC 72 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 73)
+if (null o) { log << "TC 73 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 74)
+if (null o) { log << "TC 74 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 75)
+if (null o) { log << "TC 75 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 76)
+if (null o) { log << "TC 76 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 77)
+if (null o) { log << "TC 77 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 78)
+if (null o) { log << "TC 78 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 79)
+if (null o) { log << "TC 79 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 80)
+if (null o) { log << "TC 80 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:系统测试】" }
+o = nthReq(mTC, 81)
+if (null o) { log << "TC 81 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 82)
+if (null o) { log << "TC 82 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 83)
+if (null o) { log << "TC 83 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 84)
+if (null o) { log << "TC 84 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 85)
+if (null o) { log << "TC 85 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 86)
+if (null o) { log << "TC 86 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 87)
+if (null o) { log << "TC 87 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 88)
+if (null o) { log << "TC 88 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 89)
+if (null o) { log << "TC 89 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 90)
+if (null o) { log << "TC 90 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 91)
+if (null o) { log << "TC 91 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 92)
+if (null o) { log << "TC 92 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+o = nthReq(mTC, 93)
+if (null o) { log << "TC 93 missing\n" } else { txt = o."Object Text" ; o."Object Text" = txt " 【测试层级:验收测试】" }
+save mTC
+log << "TC annotated\n"
+
+// ---- 2. 删除旧 VERIFY 链接 ----
+Link l
+for o in mTC do {
+    for l in o -> "*" do { delete l }
+}
+save mTC
+log << "old links deleted\n"
+
+// ---- 3. 重建 TC 链接 ----
+o = nthReq(mTC, 1)
+t = nthReq(mSW, 1)
+if (null o) { log << "TC 1 missing\n" } else { if (null t) { log << "target mSW 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 2)
+t = nthReq(mSW, 2)
+if (null o) { log << "TC 2 missing\n" } else { if (null t) { log << "target mSW 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 3)
+t = nthReq(mSW, 3)
+if (null o) { log << "TC 3 missing\n" } else { if (null t) { log << "target mSW 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 4)
+t = nthReq(mSW, 4)
+if (null o) { log << "TC 4 missing\n" } else { if (null t) { log << "target mSW 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 5)
+t = nthReq(mSW, 5)
+if (null o) { log << "TC 5 missing\n" } else { if (null t) { log << "target mSW 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 6)
+t = nthReq(mSW, 6)
+if (null o) { log << "TC 6 missing\n" } else { if (null t) { log << "target mSW 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 7)
+t = nthReq(mSW, 7)
+if (null o) { log << "TC 7 missing\n" } else { if (null t) { log << "target mSW 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 8)
+t = nthReq(mSW, 8)
+if (null o) { log << "TC 8 missing\n" } else { if (null t) { log << "target mSW 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 9)
+t = nthReq(mSW, 9)
+if (null o) { log << "TC 9 missing\n" } else { if (null t) { log << "target mSW 9 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 10)
+t = nthReq(mSW, 10)
+if (null o) { log << "TC 10 missing\n" } else { if (null t) { log << "target mSW 10 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 11)
+t = nthReq(mSW, 11)
+if (null o) { log << "TC 11 missing\n" } else { if (null t) { log << "target mSW 11 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 12)
+t = nthReq(mSW, 12)
+if (null o) { log << "TC 12 missing\n" } else { if (null t) { log << "target mSW 12 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 13)
+t = nthReq(mSW, 13)
+if (null o) { log << "TC 13 missing\n" } else { if (null t) { log << "target mSW 13 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 14)
+t = nthReq(mSW, 14)
+if (null o) { log << "TC 14 missing\n" } else { if (null t) { log << "target mSW 14 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 15)
+t = nthReq(mSW, 15)
+if (null o) { log << "TC 15 missing\n" } else { if (null t) { log << "target mSW 15 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 16)
+t = nthReq(mSW, 16)
+if (null o) { log << "TC 16 missing\n" } else { if (null t) { log << "target mSW 16 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 17)
+t = nthReq(mSW, 17)
+if (null o) { log << "TC 17 missing\n" } else { if (null t) { log << "target mSW 17 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 18)
+t = nthReq(mSW, 18)
+if (null o) { log << "TC 18 missing\n" } else { if (null t) { log << "target mSW 18 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 19)
+t = nthReq(mSW, 19)
+if (null o) { log << "TC 19 missing\n" } else { if (null t) { log << "target mSW 19 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 20)
+t = nthReq(mSW, 20)
+if (null o) { log << "TC 20 missing\n" } else { if (null t) { log << "target mSW 20 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 21)
+t = nthReq(mSW, 21)
+if (null o) { log << "TC 21 missing\n" } else { if (null t) { log << "target mSW 21 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 22)
+t = nthReq(mSW, 22)
+if (null o) { log << "TC 22 missing\n" } else { if (null t) { log << "target mSW 22 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 23)
+t = nthReq(mSW, 23)
+if (null o) { log << "TC 23 missing\n" } else { if (null t) { log << "target mSW 23 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 24)
+t = nthReq(mSW, 24)
+if (null o) { log << "TC 24 missing\n" } else { if (null t) { log << "target mSW 24 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 25)
+t = nthReq(mSW, 25)
+if (null o) { log << "TC 25 missing\n" } else { if (null t) { log << "target mSW 25 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 26)
+t = nthReq(mSW, 26)
+if (null o) { log << "TC 26 missing\n" } else { if (null t) { log << "target mSW 26 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 27)
+t = nthReq(mSW, 27)
+if (null o) { log << "TC 27 missing\n" } else { if (null t) { log << "target mSW 27 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 28)
+t = nthReq(mSW, 28)
+if (null o) { log << "TC 28 missing\n" } else { if (null t) { log << "target mSW 28 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 29)
+t = nthReq(mSW, 29)
+if (null o) { log << "TC 29 missing\n" } else { if (null t) { log << "target mSW 29 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 30)
+t = nthReq(mSW, 30)
+if (null o) { log << "TC 30 missing\n" } else { if (null t) { log << "target mSW 30 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 31)
+t = nthReq(mSEC, 1)
+if (null o) { log << "TC 31 missing\n" } else { if (null t) { log << "target mSEC 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 32)
+t = nthReq(mSEC, 2)
+if (null o) { log << "TC 32 missing\n" } else { if (null t) { log << "target mSEC 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 33)
+t = nthReq(mSEC, 3)
+if (null o) { log << "TC 33 missing\n" } else { if (null t) { log << "target mSEC 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 34)
+t = nthReq(mSEC, 4)
+if (null o) { log << "TC 34 missing\n" } else { if (null t) { log << "target mSEC 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 35)
+t = nthReq(mSEC, 5)
+if (null o) { log << "TC 35 missing\n" } else { if (null t) { log << "target mSEC 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 36)
+t = nthReq(mSEC, 6)
+if (null o) { log << "TC 36 missing\n" } else { if (null t) { log << "target mSEC 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 37)
+t = nthReq(mSEC, 7)
+if (null o) { log << "TC 37 missing\n" } else { if (null t) { log << "target mSEC 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 38)
+t = nthReq(mSEC, 8)
+if (null o) { log << "TC 38 missing\n" } else { if (null t) { log << "target mSEC 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 39)
+t = nthReq(mNRG, 1)
+if (null o) { log << "TC 39 missing\n" } else { if (null t) { log << "target mNRG 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 40)
+t = nthReq(mNRG, 2)
+if (null o) { log << "TC 40 missing\n" } else { if (null t) { log << "target mNRG 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 41)
+t = nthReq(mNRG, 3)
+if (null o) { log << "TC 41 missing\n" } else { if (null t) { log << "target mNRG 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 42)
+t = nthReq(mNRG, 4)
+if (null o) { log << "TC 42 missing\n" } else { if (null t) { log << "target mNRG 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 43)
+t = nthReq(mNRG, 5)
+if (null o) { log << "TC 43 missing\n" } else { if (null t) { log << "target mNRG 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 44)
+t = nthReq(mNRG, 6)
+if (null o) { log << "TC 44 missing\n" } else { if (null t) { log << "target mNRG 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 45)
+t = nthReq(mNRG, 7)
+if (null o) { log << "TC 45 missing\n" } else { if (null t) { log << "target mNRG 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 46)
+t = nthReq(mNRG, 8)
+if (null o) { log << "TC 46 missing\n" } else { if (null t) { log << "target mNRG 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 47)
+t = nthReq(mACS, 1)
+if (null o) { log << "TC 47 missing\n" } else { if (null t) { log << "target mACS 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 48)
+t = nthReq(mACS, 2)
+if (null o) { log << "TC 48 missing\n" } else { if (null t) { log << "target mACS 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 49)
+t = nthReq(mACS, 3)
+if (null o) { log << "TC 49 missing\n" } else { if (null t) { log << "target mACS 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 50)
+t = nthReq(mACS, 4)
+if (null o) { log << "TC 50 missing\n" } else { if (null t) { log << "target mACS 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 51)
+t = nthReq(mACS, 5)
+if (null o) { log << "TC 51 missing\n" } else { if (null t) { log << "target mACS 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 52)
+t = nthReq(mACS, 6)
+if (null o) { log << "TC 52 missing\n" } else { if (null t) { log << "target mACS 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 53)
+t = nthReq(mACS, 7)
+if (null o) { log << "TC 53 missing\n" } else { if (null t) { log << "target mACS 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 54)
+t = nthReq(mACS, 8)
+if (null o) { log << "TC 54 missing\n" } else { if (null t) { log << "target mACS 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 55)
+t = nthReq(mACS, 9)
+if (null o) { log << "TC 55 missing\n" } else { if (null t) { log << "target mACS 9 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 56)
+t = nthReq(mSYS, 1)
+if (null o) { log << "TC 56 missing\n" } else { if (null t) { log << "target mSYS 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 57)
+t = nthReq(mSYS, 2)
+if (null o) { log << "TC 57 missing\n" } else { if (null t) { log << "target mSYS 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 58)
+t = nthReq(mSYS, 3)
+if (null o) { log << "TC 58 missing\n" } else { if (null t) { log << "target mSYS 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 59)
+t = nthReq(mSYS, 4)
+if (null o) { log << "TC 59 missing\n" } else { if (null t) { log << "target mSYS 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 60)
+t = nthReq(mSYS, 5)
+if (null o) { log << "TC 60 missing\n" } else { if (null t) { log << "target mSYS 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 61)
+t = nthReq(mSYS, 6)
+if (null o) { log << "TC 61 missing\n" } else { if (null t) { log << "target mSYS 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 62)
+t = nthReq(mSYS, 7)
+if (null o) { log << "TC 62 missing\n" } else { if (null t) { log << "target mSYS 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 63)
+t = nthReq(mSYS, 8)
+if (null o) { log << "TC 63 missing\n" } else { if (null t) { log << "target mSYS 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 64)
+t = nthReq(mSYS, 9)
+if (null o) { log << "TC 64 missing\n" } else { if (null t) { log << "target mSYS 9 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 65)
+t = nthReq(mSYS, 10)
+if (null o) { log << "TC 65 missing\n" } else { if (null t) { log << "target mSYS 10 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 66)
+t = nthReq(mSYS, 11)
+if (null o) { log << "TC 66 missing\n" } else { if (null t) { log << "target mSYS 11 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 67)
+t = nthReq(mSYS, 12)
+if (null o) { log << "TC 67 missing\n" } else { if (null t) { log << "target mSYS 12 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 68)
+t = nthReq(mSYS, 13)
+if (null o) { log << "TC 68 missing\n" } else { if (null t) { log << "target mSYS 13 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 69)
+t = nthReq(mSYS, 14)
+if (null o) { log << "TC 69 missing\n" } else { if (null t) { log << "target mSYS 14 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 70)
+t = nthReq(mSYS, 15)
+if (null o) { log << "TC 70 missing\n" } else { if (null t) { log << "target mSYS 15 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 71)
+t = nthReq(mSYS, 16)
+if (null o) { log << "TC 71 missing\n" } else { if (null t) { log << "target mSYS 16 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 72)
+t = nthReq(mSYS, 17)
+if (null o) { log << "TC 72 missing\n" } else { if (null t) { log << "target mSYS 17 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 73)
+t = nthReq(mSYS, 18)
+if (null o) { log << "TC 73 missing\n" } else { if (null t) { log << "target mSYS 18 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 74)
+t = nthReq(mSYS, 19)
+if (null o) { log << "TC 74 missing\n" } else { if (null t) { log << "target mSYS 19 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 75)
+t = nthReq(mSYS, 20)
+if (null o) { log << "TC 75 missing\n" } else { if (null t) { log << "target mSYS 20 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 76)
+t = nthReq(mSYS, 21)
+if (null o) { log << "TC 76 missing\n" } else { if (null t) { log << "target mSYS 21 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 77)
+t = nthReq(mSYS, 22)
+if (null o) { log << "TC 77 missing\n" } else { if (null t) { log << "target mSYS 22 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 78)
+t = nthReq(mSYS, 23)
+if (null o) { log << "TC 78 missing\n" } else { if (null t) { log << "target mSYS 23 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 79)
+t = nthReq(mSYS, 24)
+if (null o) { log << "TC 79 missing\n" } else { if (null t) { log << "target mSYS 24 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 80)
+t = nthReq(mSYS, 25)
+if (null o) { log << "TC 80 missing\n" } else { if (null t) { log << "target mSYS 25 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 81)
+t = nthReq(mUR, 1)
+if (null o) { log << "TC 81 missing\n" } else { if (null t) { log << "target mUR 1 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 82)
+t = nthReq(mUR, 2)
+if (null o) { log << "TC 82 missing\n" } else { if (null t) { log << "target mUR 2 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 83)
+t = nthReq(mUR, 3)
+if (null o) { log << "TC 83 missing\n" } else { if (null t) { log << "target mUR 3 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 84)
+t = nthReq(mUR, 4)
+if (null o) { log << "TC 84 missing\n" } else { if (null t) { log << "target mUR 4 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 85)
+t = nthReq(mUR, 5)
+if (null o) { log << "TC 85 missing\n" } else { if (null t) { log << "target mUR 5 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 86)
+t = nthReq(mUR, 6)
+if (null o) { log << "TC 86 missing\n" } else { if (null t) { log << "target mUR 6 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 87)
+t = nthReq(mUR, 7)
+if (null o) { log << "TC 87 missing\n" } else { if (null t) { log << "target mUR 7 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 88)
+t = nthReq(mUR, 8)
+if (null o) { log << "TC 88 missing\n" } else { if (null t) { log << "target mUR 8 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 89)
+t = nthReq(mUR, 9)
+if (null o) { log << "TC 89 missing\n" } else { if (null t) { log << "target mUR 9 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 90)
+t = nthReq(mUR, 10)
+if (null o) { log << "TC 90 missing\n" } else { if (null t) { log << "target mUR 10 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 91)
+t = nthReq(mUR, 11)
+if (null o) { log << "TC 91 missing\n" } else { if (null t) { log << "target mUR 11 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 92)
+t = nthReq(mUR, 12)
+if (null o) { log << "TC 92 missing\n" } else { if (null t) { log << "target mUR 12 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+o = nthReq(mTC, 93)
+t = nthReq(mUR, 13)
+if (null o) { log << "TC 93 missing\n" } else { if (null t) { log << "target mUR 13 missing\n" } else { o -> "/05 验证与确认/VERIFY" -> t } }
+save mTC
+log << "TC links rebuilt\n"
+
+// ---- 4. UR -> SYS ----
+o = nthReq(mUR, 1)
+t = nthReq(mSYS, 1)
+if (null o) { log << "UR 1 missing\n" } else { if (null t) { log << "SYS 1 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 2)
+t = nthReq(mSYS, 2)
+if (null o) { log << "UR 2 missing\n" } else { if (null t) { log << "SYS 2 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 3)
+t = nthReq(mSYS, 3)
+if (null o) { log << "UR 3 missing\n" } else { if (null t) { log << "SYS 3 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 4)
+t = nthReq(mSYS, 4)
+if (null o) { log << "UR 4 missing\n" } else { if (null t) { log << "SYS 4 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 5)
+t = nthReq(mSYS, 5)
+if (null o) { log << "UR 5 missing\n" } else { if (null t) { log << "SYS 5 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 6)
+t = nthReq(mSYS, 6)
+if (null o) { log << "UR 6 missing\n" } else { if (null t) { log << "SYS 6 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 7)
+t = nthReq(mSYS, 7)
+if (null o) { log << "UR 7 missing\n" } else { if (null t) { log << "SYS 7 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 8)
+t = nthReq(mSYS, 8)
+if (null o) { log << "UR 8 missing\n" } else { if (null t) { log << "SYS 8 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 9)
+t = nthReq(mSYS, 9)
+if (null o) { log << "UR 9 missing\n" } else { if (null t) { log << "SYS 9 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 10)
+t = nthReq(mSYS, 10)
+if (null o) { log << "UR 10 missing\n" } else { if (null t) { log << "SYS 10 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 11)
+t = nthReq(mSYS, 11)
+if (null o) { log << "UR 11 missing\n" } else { if (null t) { log << "SYS 11 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 12)
+t = nthReq(mSYS, 12)
+if (null o) { log << "UR 12 missing\n" } else { if (null t) { log << "SYS 12 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 13)
+t = nthReq(mSYS, 13)
+if (null o) { log << "UR 13 missing\n" } else { if (null t) { log << "SYS 13 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 14)
+t = nthReq(mSYS, 14)
+if (null o) { log << "UR 14 missing\n" } else { if (null t) { log << "SYS 14 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 15)
+t = nthReq(mSYS, 15)
+if (null o) { log << "UR 15 missing\n" } else { if (null t) { log << "SYS 15 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 16)
+t = nthReq(mSYS, 16)
+if (null o) { log << "UR 16 missing\n" } else { if (null t) { log << "SYS 16 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 17)
+t = nthReq(mSYS, 17)
+if (null o) { log << "UR 17 missing\n" } else { if (null t) { log << "SYS 17 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 18)
+t = nthReq(mSYS, 18)
+if (null o) { log << "UR 18 missing\n" } else { if (null t) { log << "SYS 18 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 19)
+t = nthReq(mSYS, 19)
+if (null o) { log << "UR 19 missing\n" } else { if (null t) { log << "SYS 19 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 20)
+t = nthReq(mSYS, 20)
+if (null o) { log << "UR 20 missing\n" } else { if (null t) { log << "SYS 20 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 21)
+t = nthReq(mSYS, 21)
+if (null o) { log << "UR 21 missing\n" } else { if (null t) { log << "SYS 21 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 22)
+t = nthReq(mSYS, 22)
+if (null o) { log << "UR 22 missing\n" } else { if (null t) { log << "SYS 22 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 23)
+t = nthReq(mSYS, 23)
+if (null o) { log << "UR 23 missing\n" } else { if (null t) { log << "SYS 23 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 24)
+t = nthReq(mSYS, 24)
+if (null o) { log << "UR 24 missing\n" } else { if (null t) { log << "SYS 24 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 25)
+t = nthReq(mSYS, 25)
+if (null o) { log << "UR 25 missing\n" } else { if (null t) { log << "SYS 25 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 26)
+t = nthReq(mSYS, 26)
+if (null o) { log << "UR 26 missing\n" } else { if (null t) { log << "SYS 26 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 27)
+t = nthReq(mSYS, 27)
+if (null o) { log << "UR 27 missing\n" } else { if (null t) { log << "SYS 27 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 28)
+t = nthReq(mSYS, 28)
+if (null o) { log << "UR 28 missing\n" } else { if (null t) { log << "SYS 28 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 29)
+t = nthReq(mSYS, 29)
+if (null o) { log << "UR 29 missing\n" } else { if (null t) { log << "SYS 29 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 30)
+t = nthReq(mSYS, 30)
+if (null o) { log << "UR 30 missing\n" } else { if (null t) { log << "SYS 30 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 1)
+t = nthReq(mSYS, 31)
+if (null o) { log << "UR 1 missing\n" } else { if (null t) { log << "SYS 31 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 2)
+t = nthReq(mSYS, 32)
+if (null o) { log << "UR 2 missing\n" } else { if (null t) { log << "SYS 32 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 3)
+t = nthReq(mSYS, 33)
+if (null o) { log << "UR 3 missing\n" } else { if (null t) { log << "SYS 33 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 4)
+t = nthReq(mSYS, 34)
+if (null o) { log << "UR 4 missing\n" } else { if (null t) { log << "SYS 34 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 5)
+t = nthReq(mSYS, 35)
+if (null o) { log << "UR 5 missing\n" } else { if (null t) { log << "SYS 35 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 6)
+t = nthReq(mSYS, 36)
+if (null o) { log << "UR 6 missing\n" } else { if (null t) { log << "SYS 36 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 7)
+t = nthReq(mSYS, 37)
+if (null o) { log << "UR 7 missing\n" } else { if (null t) { log << "SYS 37 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 8)
+t = nthReq(mSYS, 38)
+if (null o) { log << "UR 8 missing\n" } else { if (null t) { log << "SYS 38 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 9)
+t = nthReq(mSYS, 39)
+if (null o) { log << "UR 9 missing\n" } else { if (null t) { log << "SYS 39 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 10)
+t = nthReq(mSYS, 40)
+if (null o) { log << "UR 10 missing\n" } else { if (null t) { log << "SYS 40 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 11)
+t = nthReq(mSYS, 41)
+if (null o) { log << "UR 11 missing\n" } else { if (null t) { log << "SYS 41 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 12)
+t = nthReq(mSYS, 42)
+if (null o) { log << "UR 12 missing\n" } else { if (null t) { log << "SYS 42 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 13)
+t = nthReq(mSYS, 43)
+if (null o) { log << "UR 13 missing\n" } else { if (null t) { log << "SYS 43 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 14)
+t = nthReq(mSYS, 44)
+if (null o) { log << "UR 14 missing\n" } else { if (null t) { log << "SYS 44 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 15)
+t = nthReq(mSYS, 45)
+if (null o) { log << "UR 15 missing\n" } else { if (null t) { log << "SYS 45 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 16)
+t = nthReq(mSYS, 46)
+if (null o) { log << "UR 16 missing\n" } else { if (null t) { log << "SYS 46 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 17)
+t = nthReq(mSYS, 47)
+if (null o) { log << "UR 17 missing\n" } else { if (null t) { log << "SYS 47 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 18)
+t = nthReq(mSYS, 48)
+if (null o) { log << "UR 18 missing\n" } else { if (null t) { log << "SYS 48 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 19)
+t = nthReq(mSYS, 49)
+if (null o) { log << "UR 19 missing\n" } else { if (null t) { log << "SYS 49 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 20)
+t = nthReq(mSYS, 50)
+if (null o) { log << "UR 20 missing\n" } else { if (null t) { log << "SYS 50 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 21)
+t = nthReq(mSYS, 51)
+if (null o) { log << "UR 21 missing\n" } else { if (null t) { log << "SYS 51 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 22)
+t = nthReq(mSYS, 52)
+if (null o) { log << "UR 22 missing\n" } else { if (null t) { log << "SYS 52 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 23)
+t = nthReq(mSYS, 53)
+if (null o) { log << "UR 23 missing\n" } else { if (null t) { log << "SYS 53 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 24)
+t = nthReq(mSYS, 54)
+if (null o) { log << "UR 24 missing\n" } else { if (null t) { log << "SYS 54 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 25)
+t = nthReq(mSYS, 55)
+if (null o) { log << "UR 25 missing\n" } else { if (null t) { log << "SYS 55 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 26)
+t = nthReq(mSYS, 56)
+if (null o) { log << "UR 26 missing\n" } else { if (null t) { log << "SYS 56 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 27)
+t = nthReq(mSYS, 57)
+if (null o) { log << "UR 27 missing\n" } else { if (null t) { log << "SYS 57 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 28)
+t = nthReq(mSYS, 58)
+if (null o) { log << "UR 28 missing\n" } else { if (null t) { log << "SYS 58 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 29)
+t = nthReq(mSYS, 59)
+if (null o) { log << "UR 29 missing\n" } else { if (null t) { log << "SYS 59 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 30)
+t = nthReq(mSYS, 60)
+if (null o) { log << "UR 30 missing\n" } else { if (null t) { log << "SYS 60 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 1)
+t = nthReq(mSYS, 61)
+if (null o) { log << "UR 1 missing\n" } else { if (null t) { log << "SYS 61 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 2)
+t = nthReq(mSYS, 62)
+if (null o) { log << "UR 2 missing\n" } else { if (null t) { log << "SYS 62 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 3)
+t = nthReq(mSYS, 63)
+if (null o) { log << "UR 3 missing\n" } else { if (null t) { log << "SYS 63 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 4)
+t = nthReq(mSYS, 64)
+if (null o) { log << "UR 4 missing\n" } else { if (null t) { log << "SYS 64 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 5)
+t = nthReq(mSYS, 65)
+if (null o) { log << "UR 5 missing\n" } else { if (null t) { log << "SYS 65 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 6)
+t = nthReq(mSYS, 66)
+if (null o) { log << "UR 6 missing\n" } else { if (null t) { log << "SYS 66 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 7)
+t = nthReq(mSYS, 67)
+if (null o) { log << "UR 7 missing\n" } else { if (null t) { log << "SYS 67 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 8)
+t = nthReq(mSYS, 68)
+if (null o) { log << "UR 8 missing\n" } else { if (null t) { log << "SYS 68 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 9)
+t = nthReq(mSYS, 69)
+if (null o) { log << "UR 9 missing\n" } else { if (null t) { log << "SYS 69 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 10)
+t = nthReq(mSYS, 70)
+if (null o) { log << "UR 10 missing\n" } else { if (null t) { log << "SYS 70 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 11)
+t = nthReq(mSYS, 71)
+if (null o) { log << "UR 11 missing\n" } else { if (null t) { log << "SYS 71 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 12)
+t = nthReq(mSYS, 72)
+if (null o) { log << "UR 12 missing\n" } else { if (null t) { log << "SYS 72 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 13)
+t = nthReq(mSYS, 73)
+if (null o) { log << "UR 13 missing\n" } else { if (null t) { log << "SYS 73 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 14)
+t = nthReq(mSYS, 74)
+if (null o) { log << "UR 14 missing\n" } else { if (null t) { log << "SYS 74 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 15)
+t = nthReq(mSYS, 75)
+if (null o) { log << "UR 15 missing\n" } else { if (null t) { log << "SYS 75 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 16)
+t = nthReq(mSYS, 76)
+if (null o) { log << "UR 16 missing\n" } else { if (null t) { log << "SYS 76 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 17)
+t = nthReq(mSYS, 77)
+if (null o) { log << "UR 17 missing\n" } else { if (null t) { log << "SYS 77 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 18)
+t = nthReq(mSYS, 78)
+if (null o) { log << "UR 18 missing\n" } else { if (null t) { log << "SYS 78 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 19)
+t = nthReq(mSYS, 79)
+if (null o) { log << "UR 19 missing\n" } else { if (null t) { log << "SYS 79 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 20)
+t = nthReq(mSYS, 80)
+if (null o) { log << "UR 20 missing\n" } else { if (null t) { log << "SYS 80 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 21)
+t = nthReq(mSYS, 81)
+if (null o) { log << "UR 21 missing\n" } else { if (null t) { log << "SYS 81 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 22)
+t = nthReq(mSYS, 82)
+if (null o) { log << "UR 22 missing\n" } else { if (null t) { log << "SYS 82 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 23)
+t = nthReq(mSYS, 83)
+if (null o) { log << "UR 23 missing\n" } else { if (null t) { log << "SYS 83 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 24)
+t = nthReq(mSYS, 84)
+if (null o) { log << "UR 24 missing\n" } else { if (null t) { log << "SYS 84 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 25)
+t = nthReq(mSYS, 85)
+if (null o) { log << "UR 25 missing\n" } else { if (null t) { log << "SYS 85 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 26)
+t = nthReq(mSYS, 86)
+if (null o) { log << "UR 26 missing\n" } else { if (null t) { log << "SYS 86 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 27)
+t = nthReq(mSYS, 87)
+if (null o) { log << "UR 27 missing\n" } else { if (null t) { log << "SYS 87 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 28)
+t = nthReq(mSYS, 88)
+if (null o) { log << "UR 28 missing\n" } else { if (null t) { log << "SYS 88 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 29)
+t = nthReq(mSYS, 89)
+if (null o) { log << "UR 29 missing\n" } else { if (null t) { log << "SYS 89 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 30)
+t = nthReq(mSYS, 90)
+if (null o) { log << "UR 30 missing\n" } else { if (null t) { log << "SYS 90 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 1)
+t = nthReq(mSYS, 91)
+if (null o) { log << "UR 1 missing\n" } else { if (null t) { log << "SYS 91 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 2)
+t = nthReq(mSYS, 92)
+if (null o) { log << "UR 2 missing\n" } else { if (null t) { log << "SYS 92 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 3)
+t = nthReq(mSYS, 93)
+if (null o) { log << "UR 3 missing\n" } else { if (null t) { log << "SYS 93 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 4)
+t = nthReq(mSYS, 94)
+if (null o) { log << "UR 4 missing\n" } else { if (null t) { log << "SYS 94 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 5)
+t = nthReq(mSYS, 95)
+if (null o) { log << "UR 5 missing\n" } else { if (null t) { log << "SYS 95 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 6)
+t = nthReq(mSYS, 96)
+if (null o) { log << "UR 6 missing\n" } else { if (null t) { log << "SYS 96 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+o = nthReq(mUR, 7)
+t = nthReq(mSYS, 97)
+if (null o) { log << "UR 7 missing\n" } else { if (null t) { log << "SYS 97 missing\n" } else { o -> "/00 用户需求/UR_to_SYS" -> t } }
+save mUR
+log << "UR->SYS done\n"
+
+// ---- 5. CODE -> SW ----
+o = nthReq(mCODE, 1)
+t = nthReq(mSW, 1)
+if (null o) { log << "CODE 1 missing\n" } else { if (null t) { log << "SW 1 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 2)
+t = nthReq(mSW, 2)
+if (null o) { log << "CODE 2 missing\n" } else { if (null t) { log << "SW 2 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 3)
+t = nthReq(mSW, 3)
+if (null o) { log << "CODE 3 missing\n" } else { if (null t) { log << "SW 3 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 4)
+t = nthReq(mSW, 4)
+if (null o) { log << "CODE 4 missing\n" } else { if (null t) { log << "SW 4 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 5)
+t = nthReq(mSW, 5)
+if (null o) { log << "CODE 5 missing\n" } else { if (null t) { log << "SW 5 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 6)
+t = nthReq(mSW, 6)
+if (null o) { log << "CODE 6 missing\n" } else { if (null t) { log << "SW 6 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 7)
+t = nthReq(mSW, 7)
+if (null o) { log << "CODE 7 missing\n" } else { if (null t) { log << "SW 7 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 8)
+t = nthReq(mSW, 8)
+if (null o) { log << "CODE 8 missing\n" } else { if (null t) { log << "SW 8 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 9)
+t = nthReq(mSW, 9)
+if (null o) { log << "CODE 9 missing\n" } else { if (null t) { log << "SW 9 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 10)
+t = nthReq(mSW, 10)
+if (null o) { log << "CODE 10 missing\n" } else { if (null t) { log << "SW 10 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 11)
+t = nthReq(mSW, 11)
+if (null o) { log << "CODE 11 missing\n" } else { if (null t) { log << "SW 11 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 12)
+t = nthReq(mSW, 12)
+if (null o) { log << "CODE 12 missing\n" } else { if (null t) { log << "SW 12 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 13)
+t = nthReq(mSW, 13)
+if (null o) { log << "CODE 13 missing\n" } else { if (null t) { log << "SW 13 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 14)
+t = nthReq(mSW, 14)
+if (null o) { log << "CODE 14 missing\n" } else { if (null t) { log << "SW 14 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 15)
+t = nthReq(mSW, 15)
+if (null o) { log << "CODE 15 missing\n" } else { if (null t) { log << "SW 15 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 16)
+t = nthReq(mSW, 16)
+if (null o) { log << "CODE 16 missing\n" } else { if (null t) { log << "SW 16 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 17)
+t = nthReq(mSW, 17)
+if (null o) { log << "CODE 17 missing\n" } else { if (null t) { log << "SW 17 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 18)
+t = nthReq(mSW, 18)
+if (null o) { log << "CODE 18 missing\n" } else { if (null t) { log << "SW 18 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 19)
+t = nthReq(mSW, 19)
+if (null o) { log << "CODE 19 missing\n" } else { if (null t) { log << "SW 19 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 20)
+t = nthReq(mSW, 20)
+if (null o) { log << "CODE 20 missing\n" } else { if (null t) { log << "SW 20 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 21)
+t = nthReq(mSW, 21)
+if (null o) { log << "CODE 21 missing\n" } else { if (null t) { log << "SW 21 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 22)
+t = nthReq(mSW, 22)
+if (null o) { log << "CODE 22 missing\n" } else { if (null t) { log << "SW 22 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 23)
+t = nthReq(mSW, 23)
+if (null o) { log << "CODE 23 missing\n" } else { if (null t) { log << "SW 23 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 24)
+t = nthReq(mSW, 24)
+if (null o) { log << "CODE 24 missing\n" } else { if (null t) { log << "SW 24 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 25)
+t = nthReq(mSW, 25)
+if (null o) { log << "CODE 25 missing\n" } else { if (null t) { log << "SW 25 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 26)
+t = nthReq(mSW, 26)
+if (null o) { log << "CODE 26 missing\n" } else { if (null t) { log << "SW 26 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 27)
+t = nthReq(mSW, 27)
+if (null o) { log << "CODE 27 missing\n" } else { if (null t) { log << "SW 27 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 28)
+t = nthReq(mSW, 28)
+if (null o) { log << "CODE 28 missing\n" } else { if (null t) { log << "SW 28 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 29)
+t = nthReq(mSW, 29)
+if (null o) { log << "CODE 29 missing\n" } else { if (null t) { log << "SW 29 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 30)
+t = nthReq(mSW, 30)
+if (null o) { log << "CODE 30 missing\n" } else { if (null t) { log << "SW 30 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 31)
+t = nthReq(mSW, 31)
+if (null o) { log << "CODE 31 missing\n" } else { if (null t) { log << "SW 31 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 32)
+t = nthReq(mSW, 32)
+if (null o) { log << "CODE 32 missing\n" } else { if (null t) { log << "SW 32 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 33)
+t = nthReq(mSW, 33)
+if (null o) { log << "CODE 33 missing\n" } else { if (null t) { log << "SW 33 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 34)
+t = nthReq(mSW, 34)
+if (null o) { log << "CODE 34 missing\n" } else { if (null t) { log << "SW 34 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 35)
+t = nthReq(mSW, 35)
+if (null o) { log << "CODE 35 missing\n" } else { if (null t) { log << "SW 35 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 36)
+t = nthReq(mSW, 36)
+if (null o) { log << "CODE 36 missing\n" } else { if (null t) { log << "SW 36 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 37)
+t = nthReq(mSW, 37)
+if (null o) { log << "CODE 37 missing\n" } else { if (null t) { log << "SW 37 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 38)
+t = nthReq(mSW, 38)
+if (null o) { log << "CODE 38 missing\n" } else { if (null t) { log << "SW 38 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 39)
+t = nthReq(mSW, 39)
+if (null o) { log << "CODE 39 missing\n" } else { if (null t) { log << "SW 39 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 40)
+t = nthReq(mSW, 40)
+if (null o) { log << "CODE 40 missing\n" } else { if (null t) { log << "SW 40 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 41)
+t = nthReq(mSW, 41)
+if (null o) { log << "CODE 41 missing\n" } else { if (null t) { log << "SW 41 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 42)
+t = nthReq(mSW, 42)
+if (null o) { log << "CODE 42 missing\n" } else { if (null t) { log << "SW 42 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 43)
+t = nthReq(mSW, 43)
+if (null o) { log << "CODE 43 missing\n" } else { if (null t) { log << "SW 43 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 44)
+t = nthReq(mSW, 44)
+if (null o) { log << "CODE 44 missing\n" } else { if (null t) { log << "SW 44 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 45)
+t = nthReq(mSW, 45)
+if (null o) { log << "CODE 45 missing\n" } else { if (null t) { log << "SW 45 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 46)
+t = nthReq(mSW, 46)
+if (null o) { log << "CODE 46 missing\n" } else { if (null t) { log << "SW 46 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 47)
+t = nthReq(mSW, 47)
+if (null o) { log << "CODE 47 missing\n" } else { if (null t) { log << "SW 47 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 48)
+t = nthReq(mSW, 48)
+if (null o) { log << "CODE 48 missing\n" } else { if (null t) { log << "SW 48 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 49)
+t = nthReq(mSW, 49)
+if (null o) { log << "CODE 49 missing\n" } else { if (null t) { log << "SW 49 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 50)
+t = nthReq(mSW, 50)
+if (null o) { log << "CODE 50 missing\n" } else { if (null t) { log << "SW 50 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 51)
+t = nthReq(mSW, 51)
+if (null o) { log << "CODE 51 missing\n" } else { if (null t) { log << "SW 51 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 52)
+t = nthReq(mSW, 52)
+if (null o) { log << "CODE 52 missing\n" } else { if (null t) { log << "SW 52 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 53)
+t = nthReq(mSW, 53)
+if (null o) { log << "CODE 53 missing\n" } else { if (null t) { log << "SW 53 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 54)
+t = nthReq(mSW, 54)
+if (null o) { log << "CODE 54 missing\n" } else { if (null t) { log << "SW 54 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 55)
+t = nthReq(mSW, 55)
+if (null o) { log << "CODE 55 missing\n" } else { if (null t) { log << "SW 55 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 56)
+t = nthReq(mSW, 56)
+if (null o) { log << "CODE 56 missing\n" } else { if (null t) { log << "SW 56 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 57)
+t = nthReq(mSW, 57)
+if (null o) { log << "CODE 57 missing\n" } else { if (null t) { log << "SW 57 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 58)
+t = nthReq(mSW, 58)
+if (null o) { log << "CODE 58 missing\n" } else { if (null t) { log << "SW 58 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 59)
+t = nthReq(mSW, 59)
+if (null o) { log << "CODE 59 missing\n" } else { if (null t) { log << "SW 59 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 60)
+t = nthReq(mSW, 60)
+if (null o) { log << "CODE 60 missing\n" } else { if (null t) { log << "SW 60 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 61)
+t = nthReq(mSW, 61)
+if (null o) { log << "CODE 61 missing\n" } else { if (null t) { log << "SW 61 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 62)
+t = nthReq(mSW, 62)
+if (null o) { log << "CODE 62 missing\n" } else { if (null t) { log << "SW 62 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 63)
+t = nthReq(mSW, 63)
+if (null o) { log << "CODE 63 missing\n" } else { if (null t) { log << "SW 63 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 64)
+t = nthReq(mSW, 64)
+if (null o) { log << "CODE 64 missing\n" } else { if (null t) { log << "SW 64 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 65)
+t = nthReq(mSW, 65)
+if (null o) { log << "CODE 65 missing\n" } else { if (null t) { log << "SW 65 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 66)
+t = nthReq(mSW, 66)
+if (null o) { log << "CODE 66 missing\n" } else { if (null t) { log << "SW 66 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 67)
+t = nthReq(mSW, 67)
+if (null o) { log << "CODE 67 missing\n" } else { if (null t) { log << "SW 67 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 68)
+t = nthReq(mSW, 68)
+if (null o) { log << "CODE 68 missing\n" } else { if (null t) { log << "SW 68 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 69)
+t = nthReq(mSW, 69)
+if (null o) { log << "CODE 69 missing\n" } else { if (null t) { log << "SW 69 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 70)
+t = nthReq(mSW, 70)
+if (null o) { log << "CODE 70 missing\n" } else { if (null t) { log << "SW 70 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 71)
+t = nthReq(mSW, 71)
+if (null o) { log << "CODE 71 missing\n" } else { if (null t) { log << "SW 71 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 72)
+t = nthReq(mSW, 72)
+if (null o) { log << "CODE 72 missing\n" } else { if (null t) { log << "SW 72 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 73)
+t = nthReq(mSW, 73)
+if (null o) { log << "CODE 73 missing\n" } else { if (null t) { log << "SW 73 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 74)
+t = nthReq(mSW, 74)
+if (null o) { log << "CODE 74 missing\n" } else { if (null t) { log << "SW 74 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 75)
+t = nthReq(mSW, 75)
+if (null o) { log << "CODE 75 missing\n" } else { if (null t) { log << "SW 75 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 76)
+t = nthReq(mSW, 76)
+if (null o) { log << "CODE 76 missing\n" } else { if (null t) { log << "SW 76 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 77)
+t = nthReq(mSW, 77)
+if (null o) { log << "CODE 77 missing\n" } else { if (null t) { log << "SW 77 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 78)
+t = nthReq(mSW, 78)
+if (null o) { log << "CODE 78 missing\n" } else { if (null t) { log << "SW 78 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 79)
+t = nthReq(mSW, 79)
+if (null o) { log << "CODE 79 missing\n" } else { if (null t) { log << "SW 79 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 80)
+t = nthReq(mSW, 80)
+if (null o) { log << "CODE 80 missing\n" } else { if (null t) { log << "SW 80 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 81)
+t = nthReq(mSW, 81)
+if (null o) { log << "CODE 81 missing\n" } else { if (null t) { log << "SW 81 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 82)
+t = nthReq(mSW, 82)
+if (null o) { log << "CODE 82 missing\n" } else { if (null t) { log << "SW 82 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 83)
+t = nthReq(mSW, 83)
+if (null o) { log << "CODE 83 missing\n" } else { if (null t) { log << "SW 83 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 84)
+t = nthReq(mSW, 84)
+if (null o) { log << "CODE 84 missing\n" } else { if (null t) { log << "SW 84 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 85)
+t = nthReq(mSW, 85)
+if (null o) { log << "CODE 85 missing\n" } else { if (null t) { log << "SW 85 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 86)
+t = nthReq(mSW, 86)
+if (null o) { log << "CODE 86 missing\n" } else { if (null t) { log << "SW 86 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 87)
+t = nthReq(mSW, 87)
+if (null o) { log << "CODE 87 missing\n" } else { if (null t) { log << "SW 87 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 88)
+t = nthReq(mSW, 88)
+if (null o) { log << "CODE 88 missing\n" } else { if (null t) { log << "SW 88 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 89)
+t = nthReq(mSW, 89)
+if (null o) { log << "CODE 89 missing\n" } else { if (null t) { log << "SW 89 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+o = nthReq(mCODE, 90)
+t = nthReq(mSW, 90)
+if (null o) { log << "CODE 90 missing\n" } else { if (null t) { log << "SW 90 missing\n" } else { o -> "/07 代码单元/SW_to_CODE" -> t } }
+save mCODE
+log << "CODE->SW done\n"
+
+save mSYS
+save mSEC
+save mNRG
+save mACS
+save mSW
+log << "relink done\n"
+close(log)

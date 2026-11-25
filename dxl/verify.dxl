@@ -1,0 +1,133 @@
+﻿Stream s = write("C:/doors-demo/doors-enterprise/output/all-objects.txt")
+Module m
+Object o
+string num
+string hd
+string txt
+// SYS
+m = read("/01 系统需求/SYS_系统需求规格", true)
+if (null m) {
+    s << "ERR|SYS|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "SYS|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// SEC
+m = read("/02 子系统需求/SEC_安防子系统需求", true)
+if (null m) {
+    s << "ERR|SEC|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "SEC|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// NRG
+m = read("/02 子系统需求/NRG_能源子系统需求", true)
+if (null m) {
+    s << "ERR|NRG|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "NRG|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// ACS
+m = read("/02 子系统需求/ACS_通行子系统需求", true)
+if (null m) {
+    s << "ERR|ACS|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "ACS|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// SW
+m = read("/03 软件需求/SW_平台软件需求", true)
+if (null m) {
+    s << "ERR|SW|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "SW|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// IF
+m = read("/04 接口与数据/IF_接口需求规格", true)
+if (null m) {
+    s << "ERR|IF|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "IF|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+// TC
+m = read("/05 验证与确认/TC_测试用例规格", true)
+if (null m) {
+    s << "ERR|TC|open-failed\n"
+} else {
+    for o in m do {
+        num = number o
+        hd = o."Object Heading"
+        txt = o."Object Text"
+        s << "TC|"
+        s << num
+        s << "|"
+        s << hd
+        s << "|"
+        s << txt
+        s << "\n"
+    }
+}
+close(s)

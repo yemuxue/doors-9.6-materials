@@ -1,0 +1,88 @@
+﻿// impact.dxl
+// 影响分析：取 SYS 模块第 1 条需求（即被变更的 SYS-0001），
+// 向下找子系统需求（一跳）、再向下找软件需求（二跳），向上找验证它的测试用例
+// 输出行格式：
+//   D|<方向>|<对方类型>|<编号>|<文本>
+//   2|<方向>|<上层编号>|<编号>|<文本>
+
+Stream out = write("C:/doors-demo/doors-enterprise/output/impact.txt")
+
+Module m = read("/01 系统需求/SYS_系统需求规格", true)
+Object obj
+Object target
+Object t
+Object t2
+Link l
+Link l2
+string txt
+string hd
+string num
+string tnum
+string ttxt
+string t2num
+string t2txt
+int n = 0
+
+if (null m) {
+    out << "OPEN-FAILED|||\n"
+} else {
+    for obj in m do {
+        hd = obj."Object Heading"
+        if (hd == "") {
+            n++
+            if (n == 1) { target = obj }
+        }
+    }
+
+    if (null target) {
+        out << "NOT-FOUND|||\n"
+    } else {
+        num = number target
+        txt = target."Object Text"
+        out << "CHANGED|"
+        out << num
+        out << "|"
+        out << txt
+        out << "\n"
+
+        // 一跳向下：系统需求 → 子系统需求
+        for l in target -> "*" do {
+            t = target(l)
+            tnum = number t
+            ttxt = t."Object Text"
+            out << "D|OUT|SUB|"
+            out << tnum
+            out << "|"
+            out << ttxt
+            out << "\n"
+
+            // 二跳向下：子系统需求 → 软件需求
+            for l2 in t -> "*" do {
+                t2 = target(l2)
+                t2num = number t2
+                t2txt = t2."Object Text"
+                out << "2|OUT|"
+                out << num
+                out << "|"
+                out << t2num
+                out << "|"
+                out << t2txt
+                out << "\n"
+            }
+        }
+
+        // 一跳向上：测试用例 → 系统需求（入链的对方是 source）
+        for l in target <- "*" do {
+            t = source(l)
+            tnum = number t
+            ttxt = t."Object Text"
+            out << "D|IN|TC|"
+            out << tnum
+            out << "|"
+            out << ttxt
+            out << "\n"
+        }
+    }
+}
+
+close(out)

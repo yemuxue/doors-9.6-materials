@@ -1,0 +1,43 @@
+﻿// link-coverage.dxl
+// 导出每个"需求对象"的出链/入链数量（跳过章节标题对象）
+// 行格式：模块代号|绝对编号|xxxx/yyy
+
+Stream out = write("C:/doors-demo/doors-enterprise/output/link-coverage.txt")
+
+void dumpLinks_(Stream o, string code, string path) {
+    Module m = read(path, true)
+    Object obj
+    Link l
+    string num
+    string hd
+    if (null m) {
+        o << code
+        o << "|OPEN-FAILED|-\n"
+        return
+    }
+    for obj in m do {
+        hd = obj."Object Heading"
+        if (hd == "") {
+            num = number obj
+            o << code
+            o << "|"
+            o << num
+            o << "|"
+            for l in obj -> "*" do { o << "x" }
+            o << "/"
+            for l in obj <- "*" do { o << "y" }
+            o << "\n"
+        }
+    }
+}
+
+dumpLinks_(out, "UR",  "/00 用户需求/UR_用户需求")
+dumpLinks_(out, "SYS", "/01 系统需求/SYS_系统需求规格")
+dumpLinks_(out, "SEC", "/02 子系统需求/SEC_安防子系统需求")
+dumpLinks_(out, "NRG", "/02 子系统需求/NRG_能源子系统需求")
+dumpLinks_(out, "ACS", "/02 子系统需求/ACS_通行子系统需求")
+dumpLinks_(out, "SW",  "/03 软件需求/SW_平台软件需求")
+dumpLinks_(out, "TC",  "/05 验证与确认/TC_测试用例规格")
+dumpLinks_(out, "CODE","/07 代码单元/CODE_代码单元")
+
+close(out)

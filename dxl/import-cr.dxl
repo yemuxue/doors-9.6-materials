@@ -1,0 +1,291 @@
+﻿// 自动生成文件，请勿手工修改；源数据见 data/change-requests.csv
+// 生成脚本: tools/cr2dxl.ps1
+
+Stream log = write("C:/doors-demo/doors-enterprise/output/import-cr.log")
+log << "cr import start\n"
+
+Item chkDir = item("/06 变更管理")
+if (null chkDir) {
+    Folder fd = create("/06 变更管理", "变更管理（变更单与评审记录）")
+    log << "folder: created\n"
+} else { log << "folder: exists\n" }
+
+Item chkMod = item("/06 变更管理/CR_变更单")
+if (null chkMod) {
+    Module mCR = create("/06 变更管理/CR_变更单", "变更申请单", "", 1, false)
+    if (null mCR) { log << "CR module: failed\n" } else {
+        Object o
+        Object h
+        o = create(mCR)
+        o."Object Text" = "CR-015 补充等保三级合规要求【类型:需求新增｜影响:高｜状态:待评审｜提出:吴昊｜评审:王强｜提出日期:2026-11-02｜关闭日期:｜关联需求:SYS-0040;SW-0060】"
+        o = create(mCR)
+        o."Object Text" = "CR-014 照明控制增加节假日策略【类型:需求修改｜影响:中｜状态:评审中｜提出:周敏｜评审:李娜｜提出日期:2026-10-29｜关闭日期:｜关联需求:NRG-0009;SYS-0022】"
+        o = create(mCR)
+        o."Object Text" = "CR-013 测试用例补充越权场景【类型:缺陷修正｜影响:中｜状态:已实施｜提出:赵磊｜评审:张伟｜提出日期:2026-10-05｜关闭日期:2026-10-28｜关联需求:TC-0010】"
+        o = create(mCR)
+        o."Object Text" = "CR-012 大屏分辨率适配4K【类型:需求修改｜影响:低｜状态:已关闭｜提出:陈静｜评审:吴昊｜提出日期:2026-09-30｜关闭日期:2026-10-12｜关联需求:SYS-0031;SW-0040】"
+        o = create(mCR)
+        o."Object Text" = "CR-011 巡检记录支持离线补录【类型:需求新增｜影响:低｜状态:已批准｜提出:刘洋｜评审:周敏｜提出日期:2026-10-27｜关闭日期:｜关联需求:SEC-0012】"
+        o = create(mCR)
+        o."Object Text" = "CR-010 新增系统切换演练要求【类型:需求新增｜影响:中｜状态:待评审｜提出:王强｜评审:赵磊｜提出日期:2026-10-26｜关闭日期:｜关联需求:SYS-0005】"
+        o = create(mCR)
+        o."Object Text" = "CR-009 接口鉴权由Token改为OAuth2【类型:需求修改｜影响:高｜状态:评审中｜提出:李娜｜评审:王强｜提出日期:2026-10-24｜关闭日期:｜关联需求:SW-0007;SYS-0016】"
+        o = create(mCR)
+        o."Object Text" = "CR-008 告警推送增加企业微信渠道【类型:需求修改｜影响:低｜状态:已批准｜提出:张伟｜评审:李娜｜提出日期:2026-10-22｜关闭日期:｜关联需求:NRG-0009】"
+        o = create(mCR)
+        o."Object Text" = "CR-007 停车计费支持分时段费率【类型:需求新增｜影响:中｜状态:已实施｜提出:吴昊｜评审:张伟｜提出日期:2026-10-02｜关闭日期:2026-10-25｜关联需求:ACS-0020;SYS-0009】"
+        o = create(mCR)
+        o."Object Text" = "CR-006 删除旧版报表导出接口【类型:需求删除｜影响:低｜状态:已关闭｜提出:周敏｜评审:吴昊｜提出日期:2026-09-28｜关闭日期:2026-10-10｜关联需求:SYS-0012】"
+        o = create(mCR)
+        o."Object Text" = "CR-005 视频存储周期由90天调整为180天【类型:需求修改｜影响:高｜状态:待评审｜提出:赵磊｜评审:周敏｜提出日期:2026-10-20｜关闭日期:｜关联需求:SEC-0003】"
+        o = create(mCR)
+        o."Object Text" = "CR-004 能耗采集周期由15分钟调整为5分钟【类型:需求修改｜影响:高｜状态:评审中｜提出:陈静｜评审:赵磊｜提出日期:2026-10-18｜关闭日期:｜关联需求:NRG-0002;SW-0090】"
+        o = create(mCR)
+        o."Object Text" = "CR-003 新增访客健康码核验要求【类型:需求新增｜影响:中｜状态:已批准｜提出:刘洋｜评审:王强｜提出日期:2026-10-15｜关闭日期:｜关联需求:ACS-0001】"
+        o = create(mCR)
+        o."Object Text" = "CR-002 门禁远程开门并发能力提升【类型:需求修改｜影响:中｜状态:已实施｜提出:王强｜评审:张伟｜提出日期:2026-10-12｜关闭日期:2026-10-30｜关联需求:SEC-0007;SW-0007】"
+        o = create(mCR)
+        o."Object Text" = "CR-001 统一身份认证接入方式调整【类型:需求修改｜影响:高｜状态:已关闭｜提出:张伟｜评审:李娜｜提出日期:2026-10-08｜关闭日期:2026-10-22｜关联需求:SYS-0003;SEC-0007】"
+        save mCR
+        log << "CR module: created (15 CRs)\n"
+    }
+} else { log << "CR module: exists, skip\n" }
+
+Item chkLM = item("/06 变更管理/CR_to_REQ")
+if (null chkLM) {
+    Module lm = create("/06 变更管理/CR_to_REQ", "变更单到受影响需求", manyToMany)
+    log << "link module: created\n"
+} else { log << "link module: exists\n" }
+
+// ---- 打开模块 ----
+Module mCR2 = edit("/06 变更管理/CR_变更单", true)
+Module mSW = edit("/03 软件需求/SW_平台软件需求", true)
+Module mSEC = edit("/02 子系统需求/SEC_安防子系统需求", true)
+Module mSYS = edit("/01 系统需求/SYS_系统需求规格", true)
+Module mNRG = edit("/02 子系统需求/NRG_能源子系统需求", true)
+Module mACS = edit("/02 子系统需求/ACS_通行子系统需求", true)
+Module mTC = edit("/05 验证与确认/TC_测试用例规格", true)
+Module mIF = edit("/04 接口与数据/IF_接口需求规格", true)
+
+Object obj
+Object crObj
+string txt
+string t2
+
+// ---- 建 CR -> 需求 的链接 ----
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-015 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-015: not found\n" } else {
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0040 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSW do {
+        t2 = obj."Object Text"
+        if (matches("SW-0060 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-014 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-014: not found\n" } else {
+    for obj in mNRG do {
+        t2 = obj."Object Text"
+        if (matches("NRG-0009 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0022 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-013 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-013: not found\n" } else {
+    for obj in mTC do {
+        t2 = obj."Object Text"
+        if (matches("TC-0010 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-012 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-012: not found\n" } else {
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0031 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSW do {
+        t2 = obj."Object Text"
+        if (matches("SW-0040 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-011 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-011: not found\n" } else {
+    for obj in mSEC do {
+        t2 = obj."Object Text"
+        if (matches("SEC-0012 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-010 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-010: not found\n" } else {
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0005 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-009 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-009: not found\n" } else {
+    for obj in mSW do {
+        t2 = obj."Object Text"
+        if (matches("SW-0007 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0016 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-008 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-008: not found\n" } else {
+    for obj in mNRG do {
+        t2 = obj."Object Text"
+        if (matches("NRG-0009 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-007 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-007: not found\n" } else {
+    for obj in mACS do {
+        t2 = obj."Object Text"
+        if (matches("ACS-0020 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0009 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-006 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-006: not found\n" } else {
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0012 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-005 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-005: not found\n" } else {
+    for obj in mSEC do {
+        t2 = obj."Object Text"
+        if (matches("SEC-0003 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-004 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-004: not found\n" } else {
+    for obj in mNRG do {
+        t2 = obj."Object Text"
+        if (matches("NRG-0002 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSW do {
+        t2 = obj."Object Text"
+        if (matches("SW-0090 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-003 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-003: not found\n" } else {
+    for obj in mACS do {
+        t2 = obj."Object Text"
+        if (matches("ACS-0001 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-002 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-002: not found\n" } else {
+    for obj in mSEC do {
+        t2 = obj."Object Text"
+        if (matches("SEC-0007 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSW do {
+        t2 = obj."Object Text"
+        if (matches("SW-0007 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+crObj = null
+for obj in mCR2 do {
+    txt = obj."Object Text"
+    if (matches("CR-001 ", txt)) { crObj = obj }
+}
+if (null crObj) { log << "CR-001: not found\n" } else {
+    for obj in mSYS do {
+        t2 = obj."Object Text"
+        if (matches("SYS-0003 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    for obj in mSEC do {
+        t2 = obj."Object Text"
+        if (matches("SEC-0007 ", t2)) { crObj -> "/06 变更管理/CR_to_REQ" -> obj }
+    }
+    save mCR2
+}
+
+save mCR2
+log << "cr import done\n"
+close(log)
